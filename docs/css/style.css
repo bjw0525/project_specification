@@ -1,28 +1,48 @@
-/* Minimal, clean doc styles */
+/* Naver-blog inspired, light look */
 :root{
-  --bg:#0b0c10; --panel:#111318; --ink:#e5e7eb; --muted:#9ca3af; --accent:#60a5fa; --accent-2:#f59e0b; --border:#1f2430; --link:#93c5fd;
+  --bg:#f5f6f7; /* page background */
+  --panel:#ffffff; /* card/surface */
+  --ink:#111827; /* main text */
+  --muted:#6b7280; /* secondary text */
+  --accent:#03c75a; /* Naver green */
+  --accent-2:#00b336; /* darker green */
+  --border:#e5e7eb; /* light border */
+  --link:#036635; /* link green */
 }
+
 *{box-sizing:border-box}
-html{font-family: system-ui, -apple-system, Segoe UI, Roboto, Noto Sans, Helvetica, Arial, Apple Color Emoji, Segoe UI Emoji;}
-body{margin:0;background:var(--bg);color:var(--ink);line-height:1.6}
+html{font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Noto Sans KR", "Apple SD Gothic Neo", "Malgun Gothic", "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";}
+body{margin:0;background:var(--bg);color:var(--ink);line-height:1.7}
+
+/* Layout */
 .container{max-width:980px;margin:0 auto;padding:24px}
-.nav{background:var(--panel);border-bottom:1px solid var(--border);position:sticky;top:0;z-index:10}
-.nav .wrap{max-width:980px;margin:0 auto;display:flex;align-items:center;gap:16px;padding:12px 24px}
-.brand{font-weight:700;letter-spacing:.2px}
+
+/* Top navigation */
+.nav{background:var(--accent);position:sticky;top:0;z-index:10;box-shadow:0 1px 2px rgba(0,0,0,.06)}
+.nav .wrap{max-width:980px;margin:0 auto;display:flex;align-items:center;gap:12px;padding:10px 24px}
+.brand{font-weight:800;letter-spacing:.2px;color:#fff}
 .spacer{flex:1}
-.nav a{color:var(--link);text-decoration:none;padding:8px;border-radius:6px}
-.nav a:hover{background:#0f1422}
-h1{font-size:1.75rem;margin:18px 0 8px}
-h2{font-size:1.25rem;margin:22px 0 8px;color:#cbd5e1}
+.nav a{color:#ffffff;text-decoration:none;padding:8px 10px;border-radius:6px}
+.nav a:hover{background:rgba(255,255,255,.12)}
+
+/* Typography */
+h1{font-size:1.9rem;margin:22px 0 8px;color:#0f172a}
+h2{font-size:1.2rem;margin:22px 0 10px;color:#1f2937}
 p{margin:10px 0}
 ul{margin:8px 0 14px 20px}
+a{color:var(--link)}
+a:hover{text-decoration:underline}
 code, pre{font-family: ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,"Liberation Mono","Courier New",monospace}
-pre{background:#0e1220;border:1px solid var(--border);padding:14px;border-radius:8px;overflow:auto}
-code.inline{background:#12192b;border:1px solid var(--border);padding:.1rem .35rem;border-radius:6px}
-.panel{background:var(--panel);border:1px solid var(--border);padding:18px;border-radius:12px;margin:14px 0}
+pre{background:#f8fafc;border:1px solid var(--border);padding:14px;border-radius:8px;overflow:auto;color:#0f172a}
+code.inline{background:#f3f4f6;border:1px solid var(--border);padding:.12rem .38rem;border-radius:6px;color:#0f172a}
+
+/* Surfaces */
+.panel{background:var(--panel);border:1px solid var(--border);padding:18px;border-radius:10px;margin:14px 0;box-shadow:0 1px 2px rgba(0,0,0,.04)}
 .grid{display:grid;gap:12px}
 @media (min-width:840px){.grid.cols-2{grid-template-columns:1fr 1fr}}
-.kbd{border:1px solid var(--border);padding:.05rem .35rem;border-radius:6px;background:#0e1220}
-.tag{display:inline-block;border:1px solid var(--border);padding:.2rem .5rem;border-radius:999px;margin:3px;background:#0e1220;color:#cbd5e1}
+
+/* Small UI bits */
+.kbd{border:1px solid var(--border);padding:.05rem .35rem;border-radius:6px;background:#f3f4f6;color:#111827}
+.tag{display:inline-block;border:1px solid #b7f7d3;padding:.22rem .6rem;border-radius:999px;margin:3px;background:#f0fff4;color:#065f46}
 .muted{color:var(--muted)}
 .footer{border-top:1px solid var(--border);margin-top:24px;padding:16px 0;color:var(--muted)}
