@@ -11,21 +11,140 @@
 <body>
   <nav class="nav">
     <div class="wrap">
-      <img
-        src="https://postfiles.pstatic.net/MjAyNTA4MTBfMTIz/MDAxNzU0ODM0NDg0MjIz.mBN-_sqJM46lzkFRf_pKevA72w6JtvGv1eU2UVetZ98g.Dp4A91FHntZ-JigJoSAfZylPoaRtNi8rEiwWKLaUd48g.JPEG/%EC%97%AC%ED%96%8912.jpg?type=w966"
-        alt="여행 사진" style="height:36px;width:auto;border-radius:6px;object-fit:cover" />
+      <img src="https://postfiles.pstatic.net/MjAyNTA4MTBfMTIz/MDAxNzU0ODM0NDg0MjIz.mBN-_sqJM46lzkFRf_pKevA72w6JtvGv1eU2UVetZ98g.Dp4A91FHntZ-JigJoSAfZylPoaRtNi8rEiwWKLaUd48g.JPEG/%EC%97%AC%ED%96%8912.jpg?type=w966" alt="여행 사진" style="height:36px;width:auto;border-radius:6px;object-fit:cover" />
       <div class="brand">Blog Project Docs</div>
-      <a href="./index.html">소개</a>
-      <a href="./tech-stack.html">기술 스택</a>
-      <a href="./database.html">데이터베이스</a>
-      <a href="./security.html">보안</a>
-      <a href="./getting-started.html">실행 방법</a>
       <div class="spacer"></div>
+      <div class="links">
+        <a href="./index.html">소개</a>
+        <a href="./tech-stack.html">기술 스택</a>
+        <a href="./database.html">데이터베이스</a>
+        <a href="./security.html">보안</a>
+        <a href="./getting-started.html">실행 방법</a>
+      </div>
+      <button class="menu-toggle" aria-label="메뉴 열기">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </button>
     </div>
   </nav>
 
   <main class="container">
-    <h1>블로그 프로젝트 소개</h1>
+    <section class="scrolly">
+      <div class="stage reveal bg-1" id="s-intro">
+        <span class="shape main" data-speed="-0.10"></span>
+        <span class="shape leftTriangle" data-speed="0.35"></span>
+        <span class="shape stripes" data-speed="-0.20"></span>
+        <span class="shape rightTriangle" data-speed="0.25"></span>
+        <div class="content" data-speed="0.10">
+          <h2 class="title-xl">소개</h2>
+          <p class="lede">Spring Boot 기반 블로그 프로젝트의 목적과 전반 구조를 요약합니다.</p>
+          <ul>
+            <li>게시글, 댓글, 좋아요, 동영상(Stories) 제공</li>
+            <li>Thymeleaf 템플릿 + 정적 리소스 분리</li>
+            <li>관리자/사용자 권한, Remember‑Me</li>
+          </ul>
+          <div class="cta">
+            <a class="btn btn-primary" href="#s-tech">다음: 기술 스택</a>
+            <a class="btn btn-ghost" href="./tech-stack.html">상세 보기</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="stage reveal bg-2" id="s-tech">
+        <span class="shape leftTriangle" data-speed="0.40"></span>
+        <span class="shape stripes" data-speed="-0.15"></span>
+        <div class="content" data-speed="0.08">
+          <h2 class="title-xl">기술 스택</h2>
+          <ul>
+            <li>Back‑End: Spring Boot, MVC, Validation, Security</li>
+            <li>Persistence: JPA/Hibernate, MyBatis, HikariCP</li>
+            <li>Front‑End: Thymeleaf, Kakao Maps JS</li>
+          </ul>
+          <div class="cta">
+            <a class="btn btn-primary" href="#s-db">다음: 데이터베이스</a>
+            <a class="btn btn-ghost" href="./tech-stack.html">상세 보기</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="stage reveal bg-3" id="s-db">
+        <span class="shape main" data-speed="-0.12"></span>
+        <span class="shape rightTriangle" data-speed="0.30"></span>
+        <div class="content" data-speed="0.10">
+          <h2 class="title-xl">데이터베이스</h2>
+          <ul>
+            <li>총 13개 테이블: 회원/게시글/스토리/공지/통계/설정</li>
+            <li>좋아요 유니크, 댓글 계층/소프트 삭제, CASCADE</li>
+            <li>MySQL 8.0(운영), H2(테스트)</li>
+          </ul>
+          <div class="cta">
+            <a class="btn btn-primary" href="#s-sec">다음: 보안</a>
+            <a class="btn btn-ghost" href="./database.html">상세 보기</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="stage reveal bg-4" id="s-sec">
+        <span class="shape stripes" data-speed="-0.18"></span>
+        <div class="content" data-speed="0.06">
+          <h2 class="title-xl">보안</h2>
+          <ul>
+            <li>Form 로그인, Remember‑Me, URL별 인가 정책</li>
+            <li>개발용 NoOp, 운영 전환 시 BCrypt 권장</li>
+            <li>권장: CSRF, XSS 방어, 업로드 검증</li>
+          </ul>
+          <div class="cta">
+            <a class="btn btn-primary" href="#s-start">다음: 실행 방법</a>
+            <a class="btn btn-ghost" href="./security.html">상세 보기</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="stage reveal bg-5" id="s-start">
+        <span class="shape leftTriangle" data-speed="0.28"></span>
+        <span class="shape rightTriangle" data-speed="0.22"></span>
+        <div class="content" data-speed="0.08">
+          <h2 class="title-xl">실행 방법</h2>
+          <ul>
+            <li>DB 생성 후 스키마/테스트 데이터 적용</li>
+            <li>application.properties 계정/URL 확인</li>
+            <li>Maven 실행: mvnw spring-boot:run</li>
+          </ul>
+          <div class="cta">
+            <a class="btn btn-primary" href="#s-intro">맨 위로</a>
+            <a class="btn btn-ghost" href="./getting-started.html">상세 보기</a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="hero reveal">
+      <h1 class="title">블로그 프로젝트 리포트</h1>
+      
+      <p class="subtitle">핵심 기능을 한 곳에 모은 학습형 포트폴리오 프로젝트</p>
+      <div class="actions">
+        <a class="btn btn-primary" href="./getting-started.html">빠르게 시작하기</a>
+        <a class="btn btn-ghost" href="./tech-stack.html">기술 스택 보기</a>
+      </div>
+      <span class="please-scroll">더 보기</span>
+    </section>
+
+    <section class="stats reveal">
+      <div class="stat-card">
+        <div class="num" data-count-to="13" data-count-duration="1200">0</div>
+        <div class="label">데이터베이스 테이블</div>
+      </div>
+      <div class="stat-card">
+        <div class="num" data-count-to="20" data-count-duration="1200">0</div>
+        <div class="label">샘플 게시글</div>
+      </div>
+      <div class="stat-card">
+        <div class="num"><span data-count-to="100" data-count-duration="1200">0</span>MB</div>
+        <div class="label">업로드 제한(동영상)</div>
+      </div>
+    </section>
+
+    <h1 class="section-title">블로그 프로젝트 소개</h1>
     <p>Spring Boot 기반의 블로그 시스템으로 게시글, 댓글, 좋아요, 동영상(Stories) 등 핵심 기능을 제공하는 웹 애플리케이션입니다.</p>
 
     <div class="panel">
@@ -38,9 +157,10 @@
       </ul>
     </div>
 
-    <div class="grid cols-2">
-      <div class="panel">
-        <h2>프로젝트 개요</h2>
+    <section class="section-block reveal">
+      <div class="grid cols-2">
+        <div class="panel">
+        <h2 class="section-title">프로젝트 개요</h2>
         <ul>
           <li>플랫폼: Spring Boot 3.5.7, Java 17, Maven</li>
           <li>서버: 내장 Tomcat 10.1.48, 포트 8080</li>
@@ -48,10 +168,10 @@
           <li>뷰: Thymeleaf, 정적 리소스 분리(JS/CSS/이미지/동영상)</li>
           <li>보안: Spring Security(Form Login, Remember-Me)</li>
         </ul>
-      </div>
+        </div>
 
-      <div class="panel">
-        <h2>주요 기능</h2>
+        <div class="panel">
+        <h2 class="section-title">주요 기능</h2>
         <ul>
           <li>게시글/스토리 작성·수정·삭제(ADMIN), 공개 조회</li>
           <li>댓글, 대댓글(Posts), 좋아요(AJAX), 조회수</li>
@@ -59,11 +179,12 @@
           <li>동영상 업로드(≤100MB), 썸네일 자동 생성</li>
           <li>공지사항, 방문자 통계, 사이트 설정</li>
         </ul>
+        </div>
       </div>
-    </div>
+    </section>
 
     <div class="panel">
-      <h2>빠른 이동</h2>
+      <h2 class="section-title">빠른 이동</h2>
       <ul>
         <li><a href="./tech-stack.html">기술 스택</a></li>
         <li><a href="./database.html">데이터베이스</a></li>
@@ -73,7 +194,7 @@
     </div>
 
     <div class="panel">
-      <h2>핵심 태그</h2>
+      <h2 class="section-title">핵심 태그</h2>
       <div>
         <span class="tag">Java 17</span>
         <span class="tag">Spring Boot 3.5.7</span>
@@ -92,6 +213,7 @@
 
     <div class="footer">© 2025 Blog Project</div>
   </main>
+  <script src="./js/site.js"></script>
 </body>
 
 </html>

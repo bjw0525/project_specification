@@ -9,22 +9,38 @@
 <body>
   <nav class="nav">
     <div class="wrap">
+      <img src="https://postfiles.pstatic.net/MjAyNTA4MTBfMTIz/MDAxNzU0ODM0NDg0MjIz.mBN-_sqJM46lzkFRf_pKevA72w6JtvGv1eU2UVetZ98g.Dp4A91FHntZ-JigJoSAfZylPoaRtNi8rEiwWKLaUd48g.JPEG/%EC%97%AC%ED%96%8912.jpg?type=w966" alt="여행 사진" style="height:36px;width:auto;border-radius:6px;object-fit:cover" />
       <div class="brand">Blog Project Docs</div>
-      <a href="./index.html">소개</a>
-      <a href="./tech-stack.html">기술 스택</a>
-      <a href="./database.html">데이터베이스</a>
-      <a href="./security.html">보안</a>
-      <a href="./getting-started.html">실행 방법</a>
       <div class="spacer"></div>
+      <div class="links">
+        <a href="./index.html">소개</a>
+        <a href="./tech-stack.html">기술 스택</a>
+        <a href="./database.html">데이터베이스</a>
+        <a href="./security.html">보안</a>
+        <a href="./getting-started.html">실행 방법</a>
+      </div>
+      <button class="menu-toggle" aria-label="메뉴 열기">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </button>
     </div>
   </nav>
 
   <main class="container">
-    <h1>데이터베이스 명세</h1>
-    <p>운영 DB는 MySQL 8.0(포트 3306, 스키마 <code class="inline">blog</code>), 테스트는 H2 인메모리를 사용합니다.</p>
+    <section class="hero reveal">
+      <h1 class="title">데이터베이스 명세</h1>
+      <p class="subtitle">MySQL 8.0(운영)과 H2(테스트), 13개 테이블로 구성된 스키마 요약.</p>
+      <div class="actions">
+        <a class="btn btn-primary" href="./tech-stack.html">기술 스택</a>
+        <a class="btn btn-ghost" href="./getting-started.html">실행 방법</a>
+      </div>
+    </section>
 
-    <div class="panel">
-      <h2>ERD 개요</h2>
+    <p class="reveal">운영 DB는 MySQL 8.0(포트 3306, 스키마 <code class="inline">blog</code>), 테스트는 H2 인메모리를 사용합니다.</p>
+
+    <div class="panel reveal">
+      <h2 class="section-title">ERD 개요</h2>
       <p>총 13개 테이블로 회원, 게시글/댓글/좋아요, 스토리(동영상)/댓글/좋아요, 공지, 방문 통계, 사이트 설정을 관리합니다.</p>
       <ul>
         <li>members, posts, post_images, post_likes, comments, comment_likes</li>
@@ -33,29 +49,31 @@
       </ul>
     </div>
 
-    <div class="grid cols-2">
-      <div class="panel">
-        <h2>핵심 규칙</h2>
+    <section class="section-block reveal">
+      <div class="grid cols-2">
+        <div class="panel">
+        <h2 class="section-title">핵심 규칙</h2>
         <ul>
           <li>게시글/스토리 삭제 시 관련 파일 및 연관 레코드 CASCADE</li>
           <li>좋아요: (post_id, username), (comment_id, username), (story_id, username) 유니크</li>
           <li>댓글: Posts는 계층 구조(parent_id), 소프트 삭제 플래그</li>
           <li>조회/검색: 게시글 FULLTEXT(title, content), 주요 컬럼 인덱스</li>
         </ul>
-      </div>
-      <div class="panel">
-        <h2>인덱스 하이라이트</h2>
+        </div>
+        <div class="panel">
+        <h2 class="section-title">인덱스 하이라이트</h2>
         <ul>
           <li>posts: author, category, created_at, FULLTEXT(title, content)</li>
           <li>stories: author, category, created_at, view_count</li>
           <li>comments/story_comments: post_id/story_id, created_at</li>
           <li>members: username, email 유니크</li>
         </ul>
+        </div>
       </div>
-    </div>
+    </section>
 
-    <div class="panel">
-      <h2>스키마 준비</h2>
+    <div class="panel reveal">
+      <h2 class="section-title">스키마 준비</h2>
       <pre><code>CREATE DATABASE IF NOT EXISTS blog
   DEFAULT CHARACTER SET utf8mb4
   COLLATE utf8mb4_unicode_ci;
@@ -68,8 +86,8 @@ mysql -u root -p blog &lt; test_data.sql
       </code></pre>
     </div>
 
-    <div class="panel">
-      <h2>연결 설정 (발췌)</h2>
+    <div class="panel reveal">
+      <h2 class="section-title">연결 설정 (발췌)</h2>
       <pre><code>spring.datasource.url=jdbc:mysql://localhost:3306/blog?serverTimezone=UTC&amp;characterEncoding=UTF-8
 spring.datasource.username=root
 spring.datasource.password=1111
@@ -82,6 +100,6 @@ spring.jpa.properties.hibernate.format_sql=true
 
     <div class="footer">Updated · 데이터베이스 개요</div>
   </main>
+  <script src="./js/site.js"></script>
 </body>
 </html>
-

@@ -9,21 +9,36 @@
 <body>
   <nav class="nav">
     <div class="wrap">
+      <img src="https://postfiles.pstatic.net/MjAyNTA4MTBfMTIz/MDAxNzU0ODM0NDg0MjIz.mBN-_sqJM46lzkFRf_pKevA72w6JtvGv1eU2UVetZ98g.Dp4A91FHntZ-JigJoSAfZylPoaRtNi8rEiwWKLaUd48g.JPEG/%EC%97%AC%ED%96%8912.jpg?type=w966" alt="여행 사진" style="height:36px;width:auto;border-radius:6px;object-fit:cover" />
       <div class="brand">Blog Project Docs</div>
-      <a href="./index.html">소개</a>
-      <a href="./tech-stack.html">기술 스택</a>
-      <a href="./database.html">데이터베이스</a>
-      <a href="./security.html">보안</a>
-      <a href="./getting-started.html">실행 방법</a>
       <div class="spacer"></div>
+      <div class="links">
+        <a href="./index.html">소개</a>
+        <a href="./tech-stack.html">기술 스택</a>
+        <a href="./database.html">데이터베이스</a>
+        <a href="./security.html">보안</a>
+        <a href="./getting-started.html">실행 방법</a>
+      </div>
+      <button class="menu-toggle" aria-label="메뉴 열기">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </button>
     </div>
   </nav>
 
   <main class="container">
-    <h1>기술 스택</h1>
+    <section class="hero reveal">
+      <h1 class="title">기술 스택</h1>
+      <p class="subtitle">Spring Boot를 중심으로 한 Back-End, Persistence, Front-End 및 개발 편의 도구 요약.</p>
+      <div class="actions">
+        <a class="btn btn-primary" href="./database.html">데이터베이스 보기</a>
+        <a class="btn btn-ghost" href="./getting-started.html">실행 방법</a>
+      </div>
+    </section>
 
-    <div class="panel">
-      <h2>Back-End</h2>
+    <div class="panel reveal">
+      <h2 class="section-title">Back-End</h2>
       <ul>
         <li>Spring Boot 3.5.7, Spring Framework 6.x</li>
         <li>Spring Web (MVC): REST 컨트롤러 및 서버 사이드 렌더링</li>
@@ -32,8 +47,8 @@
       </ul>
     </div>
 
-    <div class="panel">
-      <h2>Persistence</h2>
+    <div class="panel reveal">
+      <h2 class="section-title">Persistence</h2>
       <ul>
         <li>Spring Data JPA + Hibernate (MySQLDialect, DDL auto <span class="kbd">update</span>)</li>
         <li>MyBatis Spring Boot Starter 3.0.5 (mapper XML, camelCase ↔ snake_case)</li>
@@ -42,8 +57,8 @@
       </ul>
     </div>
 
-    <div class="panel">
-      <h2>Front-End</h2>
+    <div class="panel reveal">
+      <h2 class="section-title">Front-End</h2>
       <ul>
         <li>Thymeleaf + thymeleaf-extras-springsecurity6</li>
         <li>정적 리소스: <code class="inline">/css/**</code>, <code class="inline">/js/**</code>, <code class="inline">/images/**</code>, <code class="inline">/uploads/**</code></li>
@@ -52,8 +67,8 @@
       </ul>
     </div>
 
-    <div class="panel">
-      <h2>Dev & Build</h2>
+    <div class="panel reveal">
+      <h2 class="section-title">Dev &amp; Build</h2>
       <ul>
         <li>Java 17, Maven 3.x (Wrapper 포함)</li>
         <li>Spring Boot DevTools: 핫 리로드</li>
@@ -62,8 +77,8 @@
       </ul>
     </div>
 
-    <div class="panel">
-      <h2>파일 업로드</h2>
+    <div class="panel reveal">
+      <h2 class="section-title">파일 업로드</h2>
       <ul>
         <li>멀티파트: 파일/요청 크기 최대 100MB</li>
         <li>경로: 이미지 <code class="inline">/uploads/images/</code>, 동영상 <code class="inline">/uploads/videos/</code></li>
@@ -77,6 +92,6 @@ spring.servlet.multipart.max-request-size=100MB
 
     <div class="footer">Updated · 기술 스택 개요</div>
   </main>
+  <script src="./js/site.js"></script>
 </body>
 </html>
-
