@@ -1,0 +1,1254 @@
+﻿<!doctype html>
+<html lang="ko">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+    <meta name="_csrf" content="fca84bfe-422b-46ac-8864-05e6246e9dc0" id="csrfToken"/>
+    <meta name="_csrf_header" content="X-CSRF-TOKEN" id="csrfHeaderName"/>     
+    <meta name="HandheldFriendly" content="true">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="theme-color" content="#be2237">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="title" content="webjangi.com Inc.">
+    <meta name="Author" content="webjangi.com"/>
+    <meta name="naver-site-verification" content="1e24e6ce687adc9cef907046c025298b5c7d1892"/>
+    <title>웹쟁이 | 모든 웹 작품과 리소스가 한 곳에</title>
+    <meta name="apple-mobile-web-app-title" content="webjangi.com"> 
+    <meta name="description" content="웹쟁이 | 모든 웹 작품과 리소스가 한 곳에">
+    <meta name="keywords" content="웹쟁이, 디자인, UI/UX, 웹, web, 웹사이트, 홈페이지, 디자이너, 기획자, 퍼블리셔, 개발자, IOT, 사물 인터넷,  네트워크, 작품 공유, 퍼블리싱, html, css, 스타트업,IT ,모바일, 무료 리소스, 디자인 소스, 무료 psd 다운, 무료 템플릿, 반응형 웹 제작, 무료 스크립트, 포트폴리오, 온라인 포트폴리오, 갤러리 ">
+    <meta name="p:domain_verify" content="6a75bf3f9b9d7024af56dbdbbbf86252"/>
+    <meta property="og:site_name" content="웹쟁이 | 모든 웹 작품과 리소스가 한 곳에">
+    <meta property="og:title" content="웹쟁이 | 모든 웹 작품과 리소스가 한 곳에">
+    <meta property="og:description" content="웹쟁이 | 모든 웹 작품과 리소스가 한 곳에">
+    <meta property="og:image" content="./images/contents/img_og.jpg">
+    
+    
+    
+    
+    
+    <link rel="shortcut icon" href="./images/layout/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="./css/style.css" type="text/css">
+    <link rel="stylesheet" href="./css/jquery.tagit.css" type="text/css">
+    <link rel="stylesheet" href="./css/tagit.ui-zendesk.css" type="text/css">
+    <script id="detectIEjs" type="text/javascript">if (navigator.userAgent.indexOf("MSIE") > -1 || navigator.userAgent.indexOf("Trident") > -1) {location.href = '/suggestion/ie';}</script>
+    <script src="./js/jquery-1.12.4.min.js"></script>
+    <script src="./js/jquery.easing.1.3.js"></script>
+    <script src="./js/jquery-ui.min.js"></script>
+    <script src="./js/ui.js"></script>
+    <script src="./js/template.js"></script>
+    <!--<script th:src="@{./js/tealeaf.js}"></script>-->
+    <script src="./js/swiper.js"></script>
+    <script src="./js/tag-it.js"></script>
+    <script src="./js/lottie.js"></script>
+    <script src="./js/heic2any.min.js"></script>
+    <script src="./js/ImageResize.js"></script>
+    <script src="./jsm/moment.min.js"></script>
+    <script src="./jsm/jquery.cookie.min.js"></script>
+	<!-- Global Site Tag (gtag.js) - Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-107288598-1"></script>
+	<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9329328260260934" crossorigin="anonymous"></script>
+	<!-- Google Tag Manager -->
+	<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+	new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+	j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+	'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+	})(window,document,'script','dataLayer','GTM-K4Q6WVV');</script>
+	<!-- End Google Tag Manager -->
+	<script>
+	  window.dataLayer = window.dataLayer || [];
+	  function gtag(){dataLayer.push(arguments)};
+	  gtag('js', new Date());
+	  gtag('config', 'UA-107288598-1');
+	</script>
+    <script>
+    /*<![CDATA[*/
+    webj = window.webj || {};
+    webj.imageDomain = "https:\/\/webjangi-image-prod.s3.ap-northeast-2.amazonaws.com\/";
+    webj.isLogined = false;
+    /*]]>*/
+    </script>
+            
+    <script src="./jsm/webj.js"></script>
+    <script>
+    /*<![CDATA[*/
+    var isLogined = false;
+    if (isLogined == false) {
+        $('html').css('opacity', 0);
+        var autoLoginEmail = webj.getCookie('webjangi_login_email');
+        var autoLoginPassword = webj.getCookie('webjangi_login_password');
+        if (webj.isNotEmptyString(autoLoginEmail) && webj.isNotEmptyString(autoLoginPassword)) {
+            webj.ajaxPost('/login/autoLogin', {email:autoLoginEmail,password:autoLoginPassword}, function(data) {
+                if (data.result == 'success') {
+                	location.reload();
+                } else {
+                    $('html').css('opacity',1);
+                }
+            });     
+        } else {
+            $('html').css('opacity',1);
+        }       
+    }
+    /*]]>*/
+    </script>    
+    <script src="./jsm/search01.js"></script>
+</head>
+
+<body>
+
+    <!-- wrap -->
+    <div id="wrap">
+        
+        <!-- side_menu -->
+                <!-- side_menu -->
+        <div class="side_menu">
+            <div class="all_menu">
+                <span></span>
+                <span></span>
+            </div>
+            <!-- //all_menu -->
+            <!--
+            <h1><img src="./images/layout/logo.png" alt="로고"></h1>
+            -->
+            <h1>웹쟁이</h1>
+            <ul>
+                <li><a href="/" class="home"><span>홈</span></a></li>
+                <!--
+                <li th:classappend="${moduleCode} == artwork ? on"><a href="/artwork" class="gallery"><span>작품 갤러리</span></a></li>
+                -->
+                <li><a href="/freesource" class="source"><span>무료 리소스</span></a></li>
+                <li><a href="/artist" class="face"><span>인물</span></a></li>
+                <li class="line"><a href="/myProfileCollection" class="keep"><span>보관함</span></a></li>
+            </ul>
+            <div class="footer_menu">
+                <div class="select_box">
+	                <div>
+	                    <dl>
+	                        <dt><a>웹쟁이 정보</a></dt>
+	                        <dd> 
+	                            <a href="/introduce">웹쟁이 소개</a>
+	                            <a href="/noticeList" target="_blank">공지사항</a>
+	                            <!--
+	                            <a target="_blank">제휴문의</a>
+	                            -->
+	                            <a href="/privacyPolicy" target="_blank">개인정보처리방침</a> 
+	                            <a href="/termsOfUse" target="_blank">이용약관</a> 
+	                            <a href="/license" target="_blank">라이선스</a>
+	                        </dd>
+	                    </dl>
+	                </div>
+                </div>
+                <!--<p>©openfield.</p>-->
+            </div>
+        </div>
+        <!-- //side_menu -->
+
+        <!-- //side_menu -->
+
+        <!-- side_menu_mobile -->
+                <div class="gnb_m">
+            <div class="gnb_top">
+                <p class="logo"><img src="./images/layout/logo.png" alt="로고"></p>
+                <button type="button" class="menu_close"><img src="./images/layout/menu_close.png" alt="닫기버튼"></button>
+            </div>
+            <!-- //gnb_top -->
+            <ul class="menu_list">
+                <li><a href="/">홈</a></li>
+                <!--
+                <li th:classappend="${moduleCode} == artwork ? on"><a href="/artwork">작품 갤러리</a></li>
+                -->
+                <li><a href="/freesource">무료 리소스</a></li>
+                <li><a href="/artist">인물</a></li>
+                <li class="line"><a href="/myProfileCollection" class="keep"><span>보관함</span></a></li>
+            </ul>
+            <!-- //menu_list -->
+            <div class="btm_wrap">
+                <ul class="login_btn">
+                    <li><a href="./login" class="btn_m_c1">로그인</a></li>
+                    <li><a href="./signup" class="btn_m_c3">회원가입</a></li>
+                </ul>
+                <!-- //login_btn -->
+                <div class="select_box">
+                    <div>
+	                    <dl>
+	                        <dt><a>웹쟁이 정보</a></dt>
+	                        <dd> 
+	                            <a href="/introduce">웹쟁이 소개</a>
+	                            <a href="/noticeList" target="_blank">공지사항</a>
+	                            <!--
+	                            <a target="_blank">제휴문의</a>
+	                            --> 
+	                            <a href="/privacyPolicy" target="_blank">개인정보처리방침</a> 
+	                            <a href="/termsOfUse" target="_blank">이용약관</a> 
+	                            <a href="/license" target="_blank">라이선스</a> 
+	                        </dd>
+	                    </dl>
+                    </div>
+                </div>
+                <!-- //select_box -->
+            </div>
+        </div>
+
+        
+
+        <!-- //side_menu mobile -->
+        
+        <div class="wrapper">
+        
+            <!-- header -->
+            <style>
+.search_list .li_top ul li:hover {
+  background: #be2237;
+  color: #fff;    
+}
+.webj-searched-item-selected {
+  background:#f6f6f6 !important;
+}
+</style>
+            
+<header id="header">
+    <div class="inner">
+       <div class="search_wrap">
+            <!-- 하위리스트 활성화 class: active -->
+            <label for="search" class="hidden"></label>
+            <input type="search" id="search" class="search" placeholder="검색어를 입력해주세요" autocomplete="off">
+            <input type="submit" id="submit" class="submit" onclick="search_onclick_submit">
+            <button class="input_del webj-input-clear-search-keyword"><img src="./images/layout/btn_del.png" alt="삭제버튼"></button>               
+
+            <!-- search_list -->
+            <div class="search_list">
+                <div class="li_top">
+                    <ul>
+                        <li class="search_list_item search_list_item_artwork search-artwork webj-search-artwork">작품갤러리</li>
+                        <li class="search_list_item search_list_item_freesource search-freesource webj-search-freesource">무료 리소스</li>
+                        <li class="search_list_item search_list_item_artist search-artist webj-search-artist">인물</li>
+                    </ul>
+                </div>
+                <!-- //li_top -->
+                <div class="li_cont">
+                    <ul class="webj-searched-items">
+                    </ul>
+                </div>
+            </div>
+            <!-- //search_list -->
+        </div>
+        <ul class="h_side logout">
+            <li class="search">
+                <a href="#pop01" class="btn_pop_open">검색</a>
+            </li>
+            <li class="login"><a href="./login" class="btn">로그인</a></li>
+            <li class="join"><a href="./signup" class="btn">회원가입</a></li>
+        </ul>
+        <!-- mobile -->
+        <div class="m_menu">
+            <span></span>
+            <span></span>
+        </div>
+    </div>
+</header>
+                        
+
+
+<div id="pop01" class="popup">
+    <div class="pop">
+        <div class="search_header">
+            <div class="search_wrap">
+                <form action="#" class="">
+	                <label for="searchm" class="hidden"></label>
+	                <input type="search" id="searchm" class="search" placeholder="검색어를 입력해주세요" value="" autocomplete="off">
+	                <input type="submit" id="submit" class="submit" onclick="search_onclick_submit">
+	                <button class="input_del webj-input-clear-search-keyword"><img src="./images/layout/btn_del.png" alt="삭제버튼"></button>                
+                </form>
+            </div>
+            <a href="javascript:;" class="btn_close">닫기</a>
+        </div>
+        <!-- search_list -->
+        <div class="search_list">
+            <div class="inner">
+                <div class="li_top">
+                    <ul>
+                        <li class="search_list_item search_list_item_artwork search-artwork webj-search-artwork">작품갤러리</li>
+                        <li class="search_list_item search_list_item_freesource search-freesource webj-search-freesource">무료 리소스</li>
+                        <li class="search_list_item search_list_item_artist search-artist webj-search-artist">인물</li>
+                    </ul>
+                </div>
+                <!-- //li_top -->
+                <div class="li_cont">
+                    <ul class="webj-msearched-items">
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <!-- //search_list -->
+    </div>
+</div>
+
+<div id="pop02" class="popup webj-mobile-notice-container">
+    <div class="pop">
+        <div class="tip tip01">
+            <div class="tri"><img src="./images/layout/tri.png" alt="삼각형"></div>
+            <div class="tip_tt">
+                <strong>알림</strong>
+                <a href="javascript:;" class="btn_close"></a>
+            </div>
+
+            <div class="tip_cont">
+                <ul class="list webj-notice-container">
+                </ul>
+                <!-- //list -->
+            </div>
+            <!-- //알림 팝업 끝 -->
+        </div>
+    </div>
+</div>
+
+            <!-- //header -->
+            
+            <!-- container -->
+            <style>
+<!--
+@
+keyframes topanimate { 0%{
+    width: 44px;
+}
+100%{
+width
+:
+220px;
+
+    
+}
+}
+-->
+</style>
+
+<script>
+/*<![CDATA[*/
+var filter0Param = "new";
+var filter1Param = "";
+var filter2Param = "";
+var filterParam= "false";
+var tagParam = "";
+var colorParam = "";
+var domInterParam = "";
+var keywordParam = "\uBE14\uB85C\uADF8";
+filterParam = filterParam == null ? '' : filterParam;
+tagParam = tagParam == null ? '' : tagParam;
+colorParam = colorParam == null ? '' : colorParam;
+domInterParam = domInterParam == null ? '' : domInterParam;
+keywordParam = keywordParam == null ? '' : keywordParam;
+/*]]>*/
+</script> 
+
+<script type="text/javascript">
+    window.addEventListener("pageshow", function(event) {
+        var historyTraversal = event.persisted || (typeof window.performance != "undefined" && window.performance.navigation.type === 2);
+        if (historyTraversal) {
+            window.location.reload();
+        }
+    });
+</script>
+
+<!-- container -->
+<section id="container">
+
+	<!-- total_sear -->
+	<div class="total_sear">
+		<div class="sear_box">
+			<div class="sear_cont">
+				<label for="totalSearch" class="hidden"></label> <input type="search" id="totalSearch" class="sear_ty" onKeypress="" placeholder="검색어를 입력해주세요" value="블로그" autocomplete="off"> <input type="submit" id="submit" class="submit" onclick="search_onclick_submit">
+				<button class="input_del2">삭제버튼</button>
+			</div>
+			<div class="button_list">
+				<a class="on">작품갤러리</a>
+				<ul>
+					<li><a class="search-artwork-btn on">작품갤러리</a></li>
+					<li><a class="search-freesource-btn">무료리소스</a></li>
+					<li><a class="search-artist-btn">인물</a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<!-- //total_sear -->
+
+	<div class="inner grid_wrap">
+		<div class="top_wrap select_scrollArea sel_type2">
+			<div class="sel_wrap">
+				<!-- select -->
+				<!--
+				<div class="select">
+					<dl>
+						<dt>
+							<a href="javascript:;">국내 작품</a>
+						</dt>
+						<dd>
+							<div>
+
+								<ul class="sel_list active">
+									<li><a class="on" href="javascript:">국내 작품</a></li>
+									<li><a href="javascript:">해외 작품</a></li>
+								</ul>
+							</div>
+						</dd>
+					</dl>
+				</div>
+				-->
+				<!-- //select -->
+                <div class="select">
+                    <dl>
+                        <dt>
+                             
+                             
+                            <a>신규 작품</a>
+                        </dt>
+                        <dd>
+                            <div>
+                                <ul class="sel_list">
+                                    <li><a class="webj-btn-filter0" data-code="pick">웹쟁이 픽</a></li>
+                                    <li><a class="webj-btn-filter0" data-code="popular">인기 작품</a></li>
+                                    <li><a class="webj-btn-filter0 on" data-code="new">신규 작품</a></li>
+                                </ul>
+                            </div>
+                        </dd>
+                    </dl>
+                </div>
+				<!-- //select -->
+				<!-- select -->
+                <div class="select">
+                    <dl>
+                        <dt>
+                            <a class="webj-selection-categoryLevel1">작품 분야</a> 
+                            
+                        </dt>
+                        <dd>
+                            <div>
+                                <ul class="sel_list">
+                                    <li><a class="webj-btn-filter1 on" data-code="">전체</a></li>
+                                    <li><a class="webj-btn-filter1" data-code="category-001">웹사이트</a></li>
+                                    <li><a class="webj-btn-filter1" data-code="category-002">UI/UX</a></li>
+                                    <li><a class="webj-btn-filter1" data-code="category-003">브랜딩</a></li>
+                                </ul>
+                            </div>
+                        </dd>
+                    </dl>
+                </div>
+				<!-- //select -->
+				<button type="button" class="filter">필터</button>
+			</div>
+			<!-- //selbtn_wrap -->
+            <div class="filter_cont">
+                <ul>
+                    <li class="search_box">
+                        <label for="tag"></label>
+                        <input type="text" id="tag" class="search" name="tag" placeholder="태그를 입력해주세요" value="" autocomplete="off"/>
+                        <button class="input_del">
+                            <img src="./images/layout/btn_del.png" alt="삭제버튼">
+                        </button>
+                    </li>
+                    <li class="color_box box">
+                        <label for="color4"></label>
+                        <input type="text" id="color4" class="input tt" name="color4" placeholder="색상" value="" autocomplete="off"/>
+                    </li>
+                    <li class="select box">
+                        <a class="tt webj-label-domInter">국내/국외</a>
+                        <div class="list">
+                            <ul>
+                                <li><a class="webj-btn-domInter active" data-code="all">국내/국외</a></li>
+                                <li><a class="webj-btn-domInter webj-btn-dom"  data-code="dom">국내</a></li>
+                                <li><a class="webj-btn-domInter webj-btn-inter"  data-code="inter">국외</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="selec_box box">
+                       <a class="tt">카테고리</a>
+                       
+                       <div class="list">
+                            <a class="category_close">닫기</a>
+                            
+                            <div class="ca_title">웹사이트</div>
+                            <ul>
+                                <li><a class="webj-btn-filter2 on" data-code="">전체</a></li>
+                                <li><a class="webj-btn-filter2" data-code="category-001022">가전/전자<em>(109)</em></a></li>
+                                <li><a class="webj-btn-filter2" data-code="category-001023">엔터테이먼트<em>(93)</em></a></li>
+                                <li><a class="webj-btn-filter2" data-code="category-001027">레저/스포츠<em>(47)</em></a></li>
+                                <li><a class="webj-btn-filter2" data-code="category-001028">생활/라이프<em>(118)</em></a></li>
+                                <li><a class="webj-btn-filter2" data-code="category-001029">기타분류<em>(88)</em></a></li>
+                                <li><a class="webj-btn-filter2" data-code="category-001001">디자인/광고<em>(363)</em></a></li>
+                                <li><a class="webj-btn-filter2" data-code="category-001002">뷰티/여성<em>(178)</em></a></li>
+                                <li><a class="webj-btn-filter2" data-code="category-001003">기업/그룹<em>(761)</em></a></li>
+                                <li><a class="webj-btn-filter2" data-code="category-001004">관공서/기관<em>(248)</em></a></li>
+                                <li><a class="webj-btn-filter2" data-code="category-001005">쇼핑<em>(407)</em></a></li>
+                                <li><a class="webj-btn-filter2" data-code="category-001025">자동차/바이크<em>(180)</em></a></li>
+                                <li><a class="webj-btn-filter2" data-code="category-001006">패션<em>(113)</em></a></li>
+                                <li><a class="webj-btn-filter2" data-code="category-001024">인터넷/통신<em>(83)</em></a></li>
+                                <li><a class="webj-btn-filter2" data-code="category-001007">IT/솔루션<em>(445)</em></a></li>
+                                <li><a class="webj-btn-filter2" data-code="category-001008">식품/음료<em>(217)</em></a></li>
+                                <li><a class="webj-btn-filter2" data-code="category-001009">여행/숙소<em>(106)</em></a></li>
+                                <li><a class="webj-btn-filter2" data-code="category-001010">문화/예술<em>(176)</em></a></li>
+                                <li><a class="webj-btn-filter2" data-code="category-001011">교육/학원<em>(229)</em></a></li>
+                                <li><a class="webj-btn-filter2" data-code="category-001012">가구/인테리어<em>(61)</em></a></li>
+                                <li><a class="webj-btn-filter2" data-code="category-001013">건강/의료<em>(231)</em></a></li>
+                                <li><a class="webj-btn-filter2" data-code="category-001014">금융/비지니스<em>(279)</em></a></li>
+                                <li><a class="webj-btn-filter2" data-code="category-001015">영화/음악<em>(44)</em></a></li>
+                                <li><a class="webj-btn-filter2" data-code="category-001026">유아/아동<em>(51)</em></a></li>
+                                <li><a class="webj-btn-filter2" data-code="category-001016">건축/건설<em>(171)</em></a></li>
+                                <li><a class="webj-btn-filter2" data-code="category-001017">뉴스/미디어/웹진<em>(193)</em></a></li>
+                                <li><a class="webj-btn-filter2" data-code="category-001018">이벤트/프로모션<em>(69)</em></a></li>
+                                <li><a class="webj-btn-filter2" data-code="category-001019">게임/취미<em>(88)</em></a></li>
+                                <li><a class="webj-btn-filter2" data-code="category-001020">행사/캠페인<em>(113)</em></a></li>
+                                <li><a class="webj-btn-filter2" data-code="category-001021">물류/운송<em>(38)</em></a></li>
+                            </ul>                            
+                            
+                            
+                            <div class="ca_title">UI/UX</div>
+                            <ul>
+                                <li><a class="webj-btn-filter2 on" data-code="">전체</a></li>
+                                <li><a class="webj-btn-filter2" data-code="category-002016">가전/전자<em>(10)</em></a></li>
+                                <li><a class="webj-btn-filter2" data-code="category-002017">엔터테이먼트<em>(10)</em></a></li>
+                                <li><a class="webj-btn-filter2" data-code="category-002019">패션<em>(15)</em></a></li>
+                                <li><a class="webj-btn-filter2" data-code="category-002020">인터넷/통신<em>(7)</em></a></li>
+                                <li><a class="webj-btn-filter2" data-code="category-002021">기타분류<em>(15)</em></a></li>
+                                <li><a class="webj-btn-filter2" data-code="category-002026">기업/그룹<em>(7)</em></a></li>
+                                <li><a class="webj-btn-filter2" data-code="category-002001">디자인/광고<em>(21)</em></a></li>
+                                <li><a class="webj-btn-filter2" data-code="category-002002">쇼핑<em>(54)</em></a></li>
+                                <li><a class="webj-btn-filter2" data-code="category-002003">생활/라이프<em>(28)</em></a></li>
+                                <li><a class="webj-btn-filter2" data-code="category-002004">관공서/기관<em>(10)</em></a></li>
+                                <li><a class="webj-btn-filter2" data-code="category-002005">IT/솔루션<em>(24)</em></a></li>
+                                <li><a class="webj-btn-filter2" data-code="category-002018">자동차/바이크<em>(19)</em></a></li>
+                                <li><a class="webj-btn-filter2" data-code="category-002006">식품/음료<em>(18)</em></a></li>
+                                <li><a class="webj-btn-filter2" data-code="category-002007">여행/숙소<em>(8)</em></a></li>
+                                <li><a class="webj-btn-filter2" data-code="category-002024">가구/인테리어<em>(8)</em></a></li>
+                                <li><a class="webj-btn-filter2" data-code="category-002025">레저/스포츠<em>(7)</em></a></li>
+                                <li><a class="webj-btn-filter2" data-code="category-002008">문화/예술<em>(5)</em></a></li>
+                                <li><a class="webj-btn-filter2" data-code="category-002009">교육/학원<em>(2)</em></a></li>
+                                <li><a class="webj-btn-filter2" data-code="category-002010">건강/의료<em>(15)</em></a></li>
+                                <li><a class="webj-btn-filter2" data-code="category-002023">여성/뷰티<em>(8)</em></a></li>
+                                <li><a class="webj-btn-filter2" data-code="category-002011">금융/비지니스<em>(17)</em></a></li>
+                                <li><a class="webj-btn-filter2" data-code="category-002012">영화/음악<em>(10)</em></a></li>
+                                <li><a class="webj-btn-filter2" data-code="category-002013">건축/건설<em>(12)</em></a></li>
+                                <li><a class="webj-btn-filter2" data-code="category-002014">이벤트/프로모션<em>(7)</em></a></li>
+                                <li><a class="webj-btn-filter2" data-code="category-002015">게임/취미<em>(15)</em></a></li>
+                                <li><a class="webj-btn-filter2" data-code="category-002022">유아/아동<em>(3)</em></a></li>
+                            </ul>                            
+                            
+                            
+                            <div class="ca_title">브랜딩</div>
+                            <ul>
+                                <li><a class="webj-btn-filter2 on" data-code="">전체</a></li>
+                                <li><a class="webj-btn-filter2" data-code="category-003002">쇼핑/브랜드<em>(6)</em></a></li>
+                                <li><a class="webj-btn-filter2" data-code="category-003003">건강/의료<em>(0)</em></a></li>
+                                <li><a class="webj-btn-filter2" data-code="category-003004">자동차/바이크<em>(2)</em></a></li>
+                                <li><a class="webj-btn-filter2" data-code="category-003005">뷰티/여성<em>(5)</em></a></li>
+                                <li><a class="webj-btn-filter2" data-code="category-003007">패션<em>(4)</em></a></li>
+                                <li><a class="webj-btn-filter2" data-code="category-003008">식품<em>(12)</em></a></li>
+                                <li><a class="webj-btn-filter2" data-code="category-003009">게임/취미<em>(3)</em></a></li>
+                                <li><a class="webj-btn-filter2" data-code="category-003010">영화/음악<em>(4)</em></a></li>
+                                <li><a class="webj-btn-filter2" data-code="category-003011">문화/예술<em>(2)</em></a></li>
+                                <li><a class="webj-btn-filter2" data-code="category-003012">엔터테이먼트<em>(5)</em></a></li>
+                                <li><a class="webj-btn-filter2" data-code="category-003013">IT/솔루션<em>(3)</em></a></li>
+                                <li><a class="webj-btn-filter2" data-code="category-003014">교육/학원<em>(1)</em></a></li>
+                                <li><a class="webj-btn-filter2" data-code="category-003015">금융<em>(0)</em></a></li>
+                                <li><a class="webj-btn-filter2" data-code="category-003016">건축/건설<em>(1)</em></a></li>
+                                <li><a class="webj-btn-filter2" data-code="category-003017">기타분류<em>(3)</em></a></li>
+                                <li><a class="webj-btn-filter2" data-code="category-003001">가전/전자<em>(1)</em></a></li>
+                                <li><a class="webj-btn-filter2" data-code="category-003006">디자인<em>(21)</em></a></li>
+                            </ul>                            
+                            
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            
+            
+            
+			<!-- //filter_cont -->
+		</div>
+		
+		
+		
+		<!-- //top_wrap -->
+		<div class="grid_area">
+			<div id="project_list" class="cbp">
+			
+                <div class="cbp-item" data-artwork-index="A0000000115519">
+                    <div class="pick">
+                        <img src="./images/contents/img_pick.png" alt="pick">
+                    </div>
+                    <div class="cap">
+                        <div class="pc">
+                            <div class="top">
+                                <a href="https://blog.kakaobrain.com/" class="btn_link" target="_blank">https://blog.kakaobrain.com/</a>
+                            </div>
+                            <div class="over_Btn">
+                                <div class="right">
+                                    <span><a class="bookmark" data-code="A0000000115519">북마크<i class="count webj-bookmark-count webj-bookmark-count-A0000000115519" data-code="A0000000115519">4</i></a></span>
+                                    <span><a class="like webj-main-btn-like" data-code="A0000000115519">좋아요<i class="count">0</i></a></span>
+                                </div>
+                            </div>
+                        </div>
+                        <a href="/artwork/artworkView?artworkIndex=A0000000115519" class="cbp-singlePage" rel="nofollow">
+                            <div class="cbp-caption">
+                                <div>
+                                    <img src="https://webjangi-image-prod.s3.ap-northeast-2.amazonaws.com/artwork/2024/03/05/M000000000000A/A0000000115519/I0000000115523.jpg?v=1709599121" alt="작품커버이미지">
+                                </div>
+                            </div>
+                        </a>
+                        <!-- //cbp-caption -->
+                    </div>
+                    <div class="txt_area">
+                        <div class="top_txt">
+                            <a href="/artwork/artworkView?artworkIndex=A0000000115519" class="cbp-singlePage" rel="nofollow"> <span class="title">카카오브레인 Blog</span>
+                            </a>
+                        </div>
+                        <!-- //top_txt -->
+                        <div class="btm_txt">
+                            <div class="profile" data-mindex="M000000000000A">
+                                <a>
+                                    <div class="thum">
+                                        <div>
+                                            <img src="https://webjangi-image-prod.s3.ap-northeast-2.amazonaws.com/member/profile/M000000000000A/I0000000044821.jpg?v=1679644746" id="avatar-crop" style="border-radius: 90px;" onerror="this.src='./images/contents/img_profile02.png'" alt="프로필이미지">
+                                        </div>
+                                    </div>
+                                    <dl>
+                                        <dt>웹쟁이</dt>
+                                    </dl>
+                                </a>
+                            </div>
+                            <div class="stat">
+                                <span class="heart">0</span> <span class="hit">2.019</span>
+                            </div>
+                        </div>
+                        <!-- //btm_txt -->
+                    </div>
+                    <!-- //txt_area -->
+                </div>
+			
+                <div class="cbp-item" data-artwork-index="A0000000073195">
+                    <div class="pick">
+                        <img src="./images/contents/img_pick.png" alt="pick">
+                    </div>
+                    <div class="cap">
+                        <div class="pc">
+                            <div class="top">
+                                <a href="https://campaign.naver.com/2021blog/blogreport/" class="btn_link" target="_blank">https://campaign.naver.com/2021blog/blogreport/</a>
+                            </div>
+                            <div class="over_Btn">
+                                <div class="right">
+                                    <span><a class="bookmark" data-code="A0000000073195">북마크<i class="count webj-bookmark-count webj-bookmark-count-A0000000073195" data-code="A0000000073195">1</i></a></span>
+                                    <span><a class="like webj-main-btn-like" data-code="A0000000073195">좋아요<i class="count">0</i></a></span>
+                                </div>
+                            </div>
+                        </div>
+                        <a href="/artwork/artworkView?artworkIndex=A0000000073195" class="cbp-singlePage" rel="nofollow">
+                            <div class="cbp-caption">
+                                <div>
+                                    <img src="https://webjangi-image-prod.s3.ap-northeast-2.amazonaws.com/artwork/2021/12/31/M000000000000A/A0000000073195/I0000000073199.jpg?v=1640916772" alt="작품커버이미지">
+                                </div>
+                            </div>
+                        </a>
+                        <!-- //cbp-caption -->
+                    </div>
+                    <div class="txt_area">
+                        <div class="top_txt">
+                            <a href="/artwork/artworkView?artworkIndex=A0000000073195" class="cbp-singlePage" rel="nofollow"> <span class="title">2021 네이버 블로그 리포트</span>
+                            </a>
+                        </div>
+                        <!-- //top_txt -->
+                        <div class="btm_txt">
+                            <div class="profile" data-mindex="M000000000000A">
+                                <a>
+                                    <div class="thum">
+                                        <div>
+                                            <img src="https://webjangi-image-prod.s3.ap-northeast-2.amazonaws.com/member/profile/M000000000000A/I0000000044821.jpg?v=1679644746" id="avatar-crop" style="border-radius: 90px;" onerror="this.src='./images/contents/img_profile02.png'" alt="프로필이미지">
+                                        </div>
+                                    </div>
+                                    <dl>
+                                        <dt>웹쟁이</dt>
+                                    </dl>
+                                </a>
+                            </div>
+                            <div class="stat">
+                                <span class="heart">0</span> <span class="hit">381</span>
+                            </div>
+                        </div>
+                        <!-- //btm_txt -->
+                    </div>
+                    <!-- //txt_area -->
+                </div>
+			
+                <div class="cbp-item" data-artwork-index="A0000000057991">
+                    
+                    <div class="cap">
+                        <div class="pc">
+                            <div class="top">
+                                <a href="https://play.kia.com/" class="btn_link" target="_blank">https://play.kia.com/</a>
+                            </div>
+                            <div class="over_Btn">
+                                <div class="right">
+                                    <span><a class="bookmark" data-code="A0000000057991">북마크<i class="count webj-bookmark-count webj-bookmark-count-A0000000057991" data-code="A0000000057991">0</i></a></span>
+                                    <span><a class="like webj-main-btn-like" data-code="A0000000057991">좋아요<i class="count">0</i></a></span>
+                                </div>
+                            </div>
+                        </div>
+                        <a href="/artwork/artworkView?artworkIndex=A0000000057991" class="cbp-singlePage" rel="nofollow">
+                            <div class="cbp-caption">
+                                <div>
+                                    <img src="https://webjangi-image-prod.s3.ap-northeast-2.amazonaws.com/artwork/2021/12/24/M000000000000A/A0000000057991/I0000000068754.jpg?v=1641273082" alt="작품커버이미지">
+                                </div>
+                            </div>
+                        </a>
+                        <!-- //cbp-caption -->
+                    </div>
+                    <div class="txt_area">
+                        <div class="top_txt">
+                            <a href="/artwork/artworkView?artworkIndex=A0000000057991" class="cbp-singlePage" rel="nofollow"> <span class="title">PLAY KIA</span>
+                            </a>
+                        </div>
+                        <!-- //top_txt -->
+                        <div class="btm_txt">
+                            <div class="profile" data-mindex="M000000000000A">
+                                <a>
+                                    <div class="thum">
+                                        <div>
+                                            <img src="https://webjangi-image-prod.s3.ap-northeast-2.amazonaws.com/member/profile/M000000000000A/I0000000044821.jpg?v=1679644746" id="avatar-crop" style="border-radius: 90px;" onerror="this.src='./images/contents/img_profile02.png'" alt="프로필이미지">
+                                        </div>
+                                    </div>
+                                    <dl>
+                                        <dt>웹쟁이</dt>
+                                    </dl>
+                                </a>
+                            </div>
+                            <div class="stat">
+                                <span class="heart">0</span> <span class="hit">189</span>
+                            </div>
+                        </div>
+                        <!-- //btm_txt -->
+                    </div>
+                    <!-- //txt_area -->
+                </div>
+			
+                <div class="cbp-item" data-artwork-index="A0000000057427">
+                    <div class="pick">
+                        <img src="./images/contents/img_pick.png" alt="pick">
+                    </div>
+                    <div class="cap">
+                        <div class="pc">
+                            <div class="top">
+                                <a href="https://campaign.naver.com/2020blog/blogreport/" class="btn_link" target="_blank">https://campaign.naver.com/2020blog/blogreport/</a>
+                            </div>
+                            <div class="over_Btn">
+                                <div class="right">
+                                    <span><a class="bookmark" data-code="A0000000057427">북마크<i class="count webj-bookmark-count webj-bookmark-count-A0000000057427" data-code="A0000000057427">0</i></a></span>
+                                    <span><a class="like webj-main-btn-like" data-code="A0000000057427">좋아요<i class="count">0</i></a></span>
+                                </div>
+                            </div>
+                        </div>
+                        <a href="/artwork/artworkView?artworkIndex=A0000000057427" class="cbp-singlePage" rel="nofollow">
+                            <div class="cbp-caption">
+                                <div>
+                                    <img src="https://webjangi-image-prod.s3.ap-northeast-2.amazonaws.com/artwork/2021/12/24/M000000000000A/A0000000057427/I0000000067072.jpg?v=1641456846" alt="작품커버이미지">
+                                </div>
+                            </div>
+                        </a>
+                        <!-- //cbp-caption -->
+                    </div>
+                    <div class="txt_area">
+                        <div class="top_txt">
+                            <a href="/artwork/artworkView?artworkIndex=A0000000057427" class="cbp-singlePage" rel="nofollow"> <span class="title">네이버 블로그 리포트</span>
+                            </a>
+                        </div>
+                        <!-- //top_txt -->
+                        <div class="btm_txt">
+                            <div class="profile" data-mindex="M000000000000A">
+                                <a>
+                                    <div class="thum">
+                                        <div>
+                                            <img src="https://webjangi-image-prod.s3.ap-northeast-2.amazonaws.com/member/profile/M000000000000A/I0000000044821.jpg?v=1679644746" id="avatar-crop" style="border-radius: 90px;" onerror="this.src='./images/contents/img_profile02.png'" alt="프로필이미지">
+                                        </div>
+                                    </div>
+                                    <dl>
+                                        <dt>웹쟁이</dt>
+                                    </dl>
+                                </a>
+                            </div>
+                            <div class="stat">
+                                <span class="heart">0</span> <span class="hit">276</span>
+                            </div>
+                        </div>
+                        <!-- //btm_txt -->
+                    </div>
+                    <!-- //txt_area -->
+                </div>
+			
+                <div class="cbp-item" data-artwork-index="A0000000052129">
+                    
+                    <div class="cap">
+                        <div class="pc">
+                            <div class="top">
+                                <a href="https://blog.ncsoft.com/" class="btn_link" target="_blank">https://blog.ncsoft.com/</a>
+                            </div>
+                            <div class="over_Btn">
+                                <div class="right">
+                                    <span><a class="bookmark" data-code="A0000000052129">북마크<i class="count webj-bookmark-count webj-bookmark-count-A0000000052129" data-code="A0000000052129">0</i></a></span>
+                                    <span><a class="like webj-main-btn-like" data-code="A0000000052129">좋아요<i class="count">0</i></a></span>
+                                </div>
+                            </div>
+                        </div>
+                        <a href="/artwork/artworkView?artworkIndex=A0000000052129" class="cbp-singlePage" rel="nofollow">
+                            <div class="cbp-caption">
+                                <div>
+                                    <img src="https://webjangi-image-prod.s3.ap-northeast-2.amazonaws.com/artwork/2021/12/21/M000000000000A/A0000000052129/I0000000061295.jpg?v=1641531804" alt="작품커버이미지">
+                                </div>
+                            </div>
+                        </a>
+                        <!-- //cbp-caption -->
+                    </div>
+                    <div class="txt_area">
+                        <div class="top_txt">
+                            <a href="/artwork/artworkView?artworkIndex=A0000000052129" class="cbp-singlePage" rel="nofollow"> <span class="title">NC 공식 블로그</span>
+                            </a>
+                        </div>
+                        <!-- //top_txt -->
+                        <div class="btm_txt">
+                            <div class="profile" data-mindex="M0000000044769">
+                                <a>
+                                    <div class="thum">
+                                        <div>
+                                            <img src="https://webjangi-image-prod.s3.ap-northeast-2.amazonaws.com/member/profile/M0000000044769/I0000000075599.jpg?v=1641538335" id="avatar-crop" style="border-radius: 90px;" onerror="this.src='./images/contents/img_profile02.png'" alt="프로필이미지">
+                                        </div>
+                                    </div>
+                                    <dl>
+                                        <dt>메타브레인</dt>
+                                    </dl>
+                                </a>
+                            </div>
+                            <div class="stat">
+                                <span class="heart">0</span> <span class="hit">183</span>
+                            </div>
+                        </div>
+                        <!-- //btm_txt -->
+                    </div>
+                    <!-- //txt_area -->
+                </div>
+			
+                <div class="cbp-item" data-artwork-index="A0000000048433">
+                    <div class="pick">
+                        <img src="./images/contents/img_pick.png" alt="pick">
+                    </div>
+                    <div class="cap">
+                        <div class="pc">
+                            <div class="top">
+                                <a href="https://www.ssgblog.com" class="btn_link" target="_blank">https://www.ssgblog.com</a>
+                            </div>
+                            <div class="over_Btn">
+                                <div class="right">
+                                    <span><a class="bookmark" data-code="A0000000048433">북마크<i class="count webj-bookmark-count webj-bookmark-count-A0000000048433" data-code="A0000000048433">0</i></a></span>
+                                    <span><a class="like webj-main-btn-like" data-code="A0000000048433">좋아요<i class="count">0</i></a></span>
+                                </div>
+                            </div>
+                        </div>
+                        <a href="/artwork/artworkView?artworkIndex=A0000000048433" class="cbp-singlePage" rel="nofollow">
+                            <div class="cbp-caption">
+                                <div>
+                                    <img src="https://webjangi-image-prod.s3.ap-northeast-2.amazonaws.com/artwork/2021/12/16/M000000000000A/A0000000048433/I0000000059128.jpg?v=1641544652" alt="작품커버이미지">
+                                </div>
+                            </div>
+                        </a>
+                        <!-- //cbp-caption -->
+                    </div>
+                    <div class="txt_area">
+                        <div class="top_txt">
+                            <a href="/artwork/artworkView?artworkIndex=A0000000048433" class="cbp-singlePage" rel="nofollow"> <span class="title">SSG 블로그</span>
+                            </a>
+                        </div>
+                        <!-- //top_txt -->
+                        <div class="btm_txt">
+                            <div class="profile" data-mindex="M000000000000A">
+                                <a>
+                                    <div class="thum">
+                                        <div>
+                                            <img src="https://webjangi-image-prod.s3.ap-northeast-2.amazonaws.com/member/profile/M000000000000A/I0000000044821.jpg?v=1679644746" id="avatar-crop" style="border-radius: 90px;" onerror="this.src='./images/contents/img_profile02.png'" alt="프로필이미지">
+                                        </div>
+                                    </div>
+                                    <dl>
+                                        <dt>웹쟁이</dt>
+                                    </dl>
+                                </a>
+                            </div>
+                            <div class="stat">
+                                <span class="heart">0</span> <span class="hit">236</span>
+                            </div>
+                        </div>
+                        <!-- //btm_txt -->
+                    </div>
+                    <!-- //txt_area -->
+                </div>
+			
+                <div class="cbp-item" data-artwork-index="A0000000048277">
+                    <div class="pick">
+                        <img src="./images/contents/img_pick.png" alt="pick">
+                    </div>
+                    <div class="cap">
+                        <div class="pc">
+                            <div class="top">
+                                <a href="https://www.tistory.com/" class="btn_link" target="_blank">https://www.tistory.com/</a>
+                            </div>
+                            <div class="over_Btn">
+                                <div class="right">
+                                    <span><a class="bookmark" data-code="A0000000048277">북마크<i class="count webj-bookmark-count webj-bookmark-count-A0000000048277" data-code="A0000000048277">0</i></a></span>
+                                    <span><a class="like webj-main-btn-like" data-code="A0000000048277">좋아요<i class="count">0</i></a></span>
+                                </div>
+                            </div>
+                        </div>
+                        <a href="/artwork/artworkView?artworkIndex=A0000000048277" class="cbp-singlePage" rel="nofollow">
+                            <div class="cbp-caption">
+                                <div>
+                                    <img src="https://webjangi-image-prod.s3.ap-northeast-2.amazonaws.com/artwork/2021/12/16/M000000000000A/A0000000048277/I0000000059047.jpg?v=1639963111" alt="작품커버이미지">
+                                </div>
+                            </div>
+                        </a>
+                        <!-- //cbp-caption -->
+                    </div>
+                    <div class="txt_area">
+                        <div class="top_txt">
+                            <a href="/artwork/artworkView?artworkIndex=A0000000048277" class="cbp-singlePage" rel="nofollow"> <span class="title">티스토리</span>
+                            </a>
+                        </div>
+                        <!-- //top_txt -->
+                        <div class="btm_txt">
+                            <div class="profile" data-mindex="M000000000000A">
+                                <a>
+                                    <div class="thum">
+                                        <div>
+                                            <img src="https://webjangi-image-prod.s3.ap-northeast-2.amazonaws.com/member/profile/M000000000000A/I0000000044821.jpg?v=1679644746" id="avatar-crop" style="border-radius: 90px;" onerror="this.src='./images/contents/img_profile02.png'" alt="프로필이미지">
+                                        </div>
+                                    </div>
+                                    <dl>
+                                        <dt>웹쟁이</dt>
+                                    </dl>
+                                </a>
+                            </div>
+                            <div class="stat">
+                                <span class="heart">0</span> <span class="hit">364</span>
+                            </div>
+                        </div>
+                        <!-- //btm_txt -->
+                    </div>
+                    <!-- //txt_area -->
+                </div>			
+
+			</div>
+            <div id="project_list_loadMore" class="cbp-l-loadMore-button">
+                <a href="/search/loadMoreArtwork?filter0=new&amp;filter1=&amp;filter2=&amp;tag=&amp;color=&amp;domInter=&amp;keyword=블로그&amp;loadMoreOffSet=0" class="cbp-l-loadMore-link" rel="nofollow">
+                    <span class="cbp-l-loadMore-defaultText"></span>
+                    <span class="cbp-l-loadMore-loadingText"></span>
+                    <span class="cbp-l-loadMore-noMoreLoading"></span>
+                </a>
+            </div>
+		</div>
+		<!-- //grid_area -->
+	</div>
+	<!-- //grid_wrap -->
+</section>
+<!-- //container -->
+
+<!-- init cubeportfolio -->
+<script type="text/javascript" src="./js/jquery.cubeportfolio.min.js"></script>
+<script type="text/javascript" src="./js/cube.js"></script>
+<script type="text/javascript" src="./js/jquery.backDetect.js"></script>
+<script type="text/javascript" src="./js/jquery.simple-color-picker.js"></script>
+<script type="text/javascript">
+	$('.col_list li').click(function() {
+		$(this).toggleClass('on');
+	}); //컬렉션에추가팝업
+
+	$('.filter_cont .selec_box .list li a').click(function() {
+		$(this).parents('.list').removeClass('active');
+	}); //전제작품리스트클릭시창닫기
+
+	/* 카테고리 fiexd 고정 */
+	$(function() {
+		$(window).scroll(function() {
+			if ($(this).scrollTop() > Math.ceil($('.grid_wrap').offset().top)) {
+				$('.select_scrollArea').addClass('fix');
+			} else {
+				$('.select_scrollArea').removeClass('fix');
+
+			}
+		});
+
+	})
+</script>
+
+            <!-- //container -->
+            
+            <!-- footer -->
+                        <!--
+            <footer id="footer">
+                <ul>
+                    <li id="footerCompany">주식회사 오픈필드</li>
+                    <li id="footerBizNumber">사업자 번호: 618-81-26362</li>
+                </ul>
+                <p class="copy">©openfield. All Rights Reserved. Version : 20210307-1903</p>
+            </footer>
+            -->
+            <footer id="footer">
+                <ul>
+                    <li><a href="/introduce">웹쟁이 소개</a></li>
+                    <li><a href="/noticeList" target="_blank">공지사항</a></li>
+                    <li><a href="/privacyPolicy" target="_blank">개인정보처리방침</a></li>
+                    <li><a href="/termsOfUse" target="_blank">이용약관</a></li>
+                    <li><a href="/license" target="_blank">라이선스</a></li>
+                </ul>
+                <p><a href="http://www.openfield.co.kr/" target="_blank"><img src="images/layout/foot_logo.png" alt="오픈필드사이트"></a></p>
+                <input type="text" style="width:1px; height:0px; visibility: hidden;">
+            </footer>
+
+            <!-- //footer -->
+            
+        </div>
+
+        <!-- popup -->
+        <div class="modal" id="modalFollowAlert">
+    <div class="modal-dialog" style="max-width:460px">
+        <div class="modal-content">
+            <div class="modal-title">               
+                <a class="pop_close" data-dismiss="modal">닫기</a>
+            </div>
+            <div class="modal-body">                    
+                <div class="modal-txt">
+                    <div class="error_text">로그인 후 팔로우 가능합니다.<br/>로그인 하시겠습니까?</div>
+                </div>
+                <ul class="btn_area">
+                    <li><a class="btn_m3_c4" data-dismiss="modal">취소</a></li>
+                    <li><a class="btn_m3_c1 modalFollowAlertConfirm">확인</a></li>
+                </ul>
+                <!-- //btn_area -->
+            </div>
+        </div>
+    </div>
+</div>
+
+        <div class="modal" id="modalAlertPopup" style="z-index:99999">
+            <div class="modal-dialog" style="max-width:460px">
+                <div class="modal-content">
+                    <div class="modal-title">               
+                        <a class="pop_close" data-dismiss="modal">닫기</a>
+                    </div>
+                    <div class="modal-body">                    
+                        <div class="modal-txt">
+                            <div class="error_text" id="modalAlertPopupMessage"></div>
+                        </div>
+                        <ul class="btn_area">
+                            <li><a class="btn_m3_c1" id="modalAlertPopupConfirmButton">확인</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+	    <div class="modal" id="modalInfoPopup" style="z-index:99999">
+	        <div class="modal-dialog" style="max-width:460px">
+	            <div class="modal-content">
+	                <div class="modal-title">               
+	                    <a class="pop_close" data-dismiss="modal">닫기</a>
+	                </div>
+	                <div class="modal-body">                    
+	                    <div class="modal-txt">
+	                        <div class="error_text" id="modalInfoPopupMessage"></div>
+	                    </div>
+	                    <ul class="btn_area">
+	                        <li><a class="btn_m3_c1" id="modalInfoPopupConfirmButton">확인</a></li>
+	                    </ul>
+	                </div>
+	            </div>
+	        </div>
+	    </div>
+
+	    <div class="modal" id="modalConfirmPopup">
+	        <div class="modal-dialog" style="max-width:460px">
+	            <div class="modal-content">
+	                <div class="modal-title">               
+	                    <a class="pop_close" data-dismiss="modal">닫기</a>
+	                </div>
+	                <div class="modal-body">                    
+	                    <div class="modal-txt">
+	                        <div class="error_text" id="modalConfirmMessage"></div>
+	                    </div>
+	                    <ul class="btn_area">
+	                        <li><a class="btn_m3_c4" data-dismiss="modal">취소</a></li>
+	                        <li><a class="btn_m3_c1" id="modalConfirmPopupConfirmButton">확인</a></li>
+	                    </ul>
+	                    <!-- //btn_area -->
+	                </div>
+	            </div>
+	        </div>
+	    </div>
+        
+	    <div class="modal" id="modalErrorAlert">
+	        <div class="modal-dialog" style="max-width:460px">
+	            <div class="modal-content">
+	                <div class="modal-title">
+	                    <h4 id="modalErrorAlertTitle"></h4>
+	                    <a  class="pop_close" data-dismiss="modal">닫기</a>
+	                </div>
+	                <div class="modal-body">
+	                    <div class="modal-txt txt-left">
+	                        <div class="error_text" id="modalErrorAlertMessage"></div>
+	                    </div>
+	                </div>
+	            </div>
+	        </div>
+	    </div>        
+        
+        <div class="modal" id="modalWarningAlert">
+            <div class="modal-dialog" style="max-width:460px">
+                <div class="modal-content">
+                    <div class="modal-body">
+                        <div class="modal-txt txt-left">
+                            <div class="error_text" id="modalAlertMessage"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+	    <div class="modal" id="modalCollectionForEmpty" style="z-index:99999">
+	        <div class="modal-dialog" style="max-width:500px">
+	            <div class="modal-content">
+	                <div class="modal-title">
+	                    <h4>컬렉션에 추가</h4>
+	                    <a class="pop_close" data-dismiss="modal">닫기</a>
+	                </div>
+	                <div class="modal-body">
+	                    <div class="modal-txt">
+	                        <div class="txt_box">
+	                            <div class="txt_con">
+	                                <dl>
+	                                    <dt>첫 컬렉션 시작</dt>
+	                                    <dd>컬렉션을 사용하여 검토용이나<span class="t_brm"></span> 영감을 얻을 목적으로,<br> 또는 마음에드는 프로젝트를 저장하세요 </dd>
+	                                </dl>
+	                                <a class="btn_col2 webj-btn-make-collection">컬렉션 만들기</a>
+	                            </div>
+	                        </div>
+	                    </div>
+	                    <ul class="btn_area">
+	                        <li><a class="btn_m3_c3 webj-btn-make-collection">컬렉션 만들기</a></li>
+	                        <li><a class="btn_m3_c1">저장</a></li>
+	                    </ul>
+	                    <!-- //btn_area -->
+	                </div>
+	            </div>
+	        </div>
+	    </div>                
+        
+	    <div class="modal" id="modalCollectionForNew" style="z-index:99999">
+	        <div class="modal-dialog" style="max-width:460px">
+	            <div class="modal-content">
+	                <div class="modal-title">
+	                    <h4>컬렉션 만들기</h4>
+	                    <a class="pop_close" data-dismiss="modal">닫기</a>
+	                </div>
+	                <div class="modal-body">
+	                    <div class="modal-txt">
+	                        <div class="w_box">
+	                            <div class="w300">
+	                                <label for="col_name" class="hidden">컬렉션이름입력</label>
+	                                <input type="text" id="col_name" name="collectname" placeholder="컬렉션 이름" title="컬렉션이름입력" value="" class="webj-input-collection-name">
+	                            </div>
+	                            <div><button class="btn_m2_c1 webj-btn-confirm-make-collection">만들기</button></div>
+	                            <!-- 비활성화시 class: disabled 추가(공통)-->
+	                        </div>
+	                    </div>
+	                </div>
+	            </div>
+	        </div>
+	    </div>        
+        
+	    <div class="modal" id="modalCollectionList" style="z-index:99999">
+	        <div class="modal-dialog" style="max-width:500px">
+	            <div class="modal-content">
+	                <div class="modal-title">
+	                    <h4 class="webj-collection-popup-title">컬렉션에 추가</h4>
+	                    <a class="pop_close" data-dismiss="modal">닫기</a>
+	                </div>
+	                <div class="modal-body">
+	                    <div class="modal-txt">
+	                        <div class="scroll">
+	                            <ul class="col_list webj-collection-list-container">
+	                            </ul>
+	                        </div>
+	                    </div>
+	                    <ul class="btn_area">
+	                        <li><a class="btn_m3_c3 webj-btn-make-collection">컬렉션 만들기</a></li>
+	                        <li><a class="btn_m3_c1 webj-btn-save-collection-item">저장</a></li>
+	                    </ul>
+	                    <!-- //btn_area -->
+	                </div>
+	            </div>
+	        </div>
+	    </div>        
+	    
+	    <div class="modal" id="modalNeedLogin" style="z-index:99999;">
+	        <div class="modal-dialog" style="max-width:460px">
+	            <div class="modal-content">
+	                <div class="modal-title">               
+	                    <a class="pop_close" data-dismiss="modal">닫기</a>
+	                </div>
+	                <div class="modal-body">                    
+	                    <div class="modal-txt"> <!-- 텍스트 왼쪽 정렬 원할 경우 class: txt-left 추가 -->
+	                        <div class="error_text">회원만 이용하실 수 있습니다.<br>로그인 하시겠습니까? </div>
+	                    </div>
+	                    <ul class="btn_area">
+	                        <li><a class="btn_m3_c4" data-dismiss="modal">취소</a></li>
+	                        <li><a class="btn_m3_c1 webj-btn-need-login-confirm">확인</a></li>
+	                    </ul>
+	                    <!-- //btn_area -->
+	                </div>
+	            </div>
+	        </div>
+        </div>
+        
+        <!-- //popup -->
+        
+    </div>
+    <!-- //wrap -->
+
+    <div class="control_pop webj-today-popup webj-today-popup-9" style="display:none;">
+        <a class="pop_close control_close webj-btn-today-popup-close" data-code="9"></a>
+        <a class="m_link btn_pop " data-toggle="modal" data-target="#modalTodayPopup">
+            <p>브랜드 광고를 시작해보세요.</p>
+            <em></em>
+        </a>
+    </div>
+
+    
+
+    <div class="modal" id="modalTodayPopup" tabindex="-1" style="display: none;">
+        <!-- img 컨텐츠 들어갈때 w330클래스 추가 -->
+        <div class="modal-dialog w330" style="max-width: 500px; margin-top: 317.5px;">
+            <div class="modal-content">
+                <div class="modal-title">
+                    <a href="#" class="pop_close" data-dismiss="modal">닫기</a>
+                </div>
+                <div class="modal-body p0">
+                    <div class="modal-img">
+                        <a href="https://webjangi.com/noticeView?pageNumber=1&amp;noticeIndex=17" target="blank" class="pop_link ">
+                            <img src="https://webjangi-image-prod.s3.ap-northeast-2.amazonaws.com/popup/2025/08/22/I0000000129642.jpg?v=1760489681" alt="">
+                        </a>
+                                                
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- cursor -->
+    	
+    <!--- //cursor -->
+
+</body>
+
+</html>
+

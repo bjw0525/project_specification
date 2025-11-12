@@ -78,20 +78,7 @@
     counters.forEach(startCounter);
   }
 
-  // Subtle hero floating decor animation via CSS variables
-  const hero = $('.hero');
-  if (hero) {
-    let t0 = performance.now();
-    const loop = (now) => {
-      const t = (now - t0) / 1000;
-      hero.style.setProperty('--blob1-x', (Math.sin(t*0.3)*2)+'px');
-      hero.style.setProperty('--blob1-y', (Math.cos(t*0.4)*2)+'px');
-      hero.style.setProperty('--blob2-x', (Math.cos(t*0.25)*2)+'px');
-      hero.style.setProperty('--blob2-y', (Math.sin(t*0.35)*2)+'px');
-      requestAnimationFrame(loop);
-    };
-    requestAnimationFrame(loop);
-  }
+  // Hero inline CSS variable animation disabled per request
 
   // Rolling words effect (pleaseshop-like)
   const rollContainer = $('.roll-words .words');
@@ -131,4 +118,21 @@
       if (e.key === 'ArrowLeft') { idx = (idx - 1 + slides.length) % slides.length; activate(idx); }
     });
   }
+
+  // Parallax for elements with data-speed
+  const speedEls = Array.from(document.querySelectorAll('[data-speed]'));
+  const parallax = () => {
+    const vh = window.innerHeight || document.documentElement.clientHeight;
+    speedEls.forEach(el => {
+      const rect = el.getBoundingClientRect();
+      const center = rect.top + rect.height/2; // position relative to viewport
+      const delta = (vh/2 - center); // element above/below center
+      const sp = parseFloat(el.getAttribute('data-speed') || '0');
+      const drift = parseFloat(el.getAttribute('data-drift') || '0');
+      el.style.transform = `translateY(${delta*sp + drift*40}px)`;
+    });
+  };
+  window.addEventListener('scroll', parallax, {passive:true});
+  window.addEventListener('resize', parallax);
+  parallax();
 })();
