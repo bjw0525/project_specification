@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>보안</title>
+  <link rel="stylesheet" href="./css/style.css" />
+</head>
+<body>
+  <nav class="nav">
+    <div class="wrap">
+      <div class="brand">Blog Project Docs</div>
+      <a href="./index.html">소개</a>
+      <a href="./tech-stack.html">기술 스택</a>
+      <a href="./database.html">데이터베이스</a>
+      <a href="./security.html">보안</a>
+      <a href="./getting-started.html">실행 방법</a>
+      <div class="spacer"></div>
+    </div>
+  </nav>
+
+  <main class="container">
+    <h1>보안 구성</h1>
+    <p>Spring Security 기반으로 Form Login과 Remember-Me를 사용하며, URL 패턴별 접근 권한을 세분화합니다.</p>
+
+    <div class="panel">
+      <h2>인증</h2>
+      <ul>
+        <li>로그인 페이지: <code class="inline">/member/signin</code> (POST 처리 포함)</li>
+        <li>로그아웃: <code class="inline">/member/signout</code></li>
+        <li>성공 시 <code class="inline">/</code>, 실패 시 <code class="inline">/member/signin?error</code></li>
+      </ul>
+    </div>
+
+    <div class="panel">
+      <h2>인가</h2>
+      <ul>
+        <li>공개: 홈, 정적 리소스, GET 공지/게시글/스토리 목록·상세</li>
+        <li>인증 필요: 댓글 작성, 좋아요, 회원 정보 수정/삭제</li>
+        <li>ADMIN 전용: 게시글/스토리/공지 작성·수정·삭제, 관리자 페이지</li>
+      </ul>
+    </div>
+
+    <div class="panel">
+      <h2>비밀번호 인코딩</h2>
+      <ul>
+        <li>개발용: <strong>NoOpPasswordEncoder</strong> (평문 저장) — 운영 금지</li>
+        <li>운영 권장: <strong>BCryptPasswordEncoder</strong></li>
+      </ul>
+      <pre><code>// 운영 전환 시 예시 (Java)
+@Bean
+PasswordEncoder passwordEncoder() {
+    return new BCryptPasswordEncoder();
+}
+      </code></pre>
+    </div>
+
+    <div class="panel">
+      <h2>Remember-Me</h2>
+      <ul>
+        <li>유지 기간: 14일</li>
+        <li>Key: <code class="inline">blog-remember-me-key</code></li>
+      </ul>
+    </div>
+
+    <div class="panel">
+      <h2>추가 권장 사항</h2>
+      <ul>
+        <li>CSRF 토큰 활성화</li>
+        <li>XSS 방어(입력 검증, 출력 인코딩), 컨텐츠 보안 정책(CSP) 고려</li>
+        <li>SQL Injection 방어(파라미터 바인딩, Mapper 검토)</li>
+        <li>파일 업로드 검증(확장자, MIME, 크기, 저장 경로)</li>
+        <li>API Rate Limiting, 로깅/감사 전략 수립</li>
+      </ul>
+    </div>
+
+    <div class="footer">Updated · 보안 구성 요약</div>
+  </main>
+</body>
+</html>
+

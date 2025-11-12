@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>블로그 프로젝트 소개</title>
+  <link rel="stylesheet" href="./css/style.css" />
+</head>
+<body>
+  <nav class="nav">
+    <div class="wrap">
+      <div class="brand">Blog Project Docs</div>
+      <a href="./index.html">소개</a>
+      <a href="./tech-stack.html">기술 스택</a>
+      <a href="./database.html">데이터베이스</a>
+      <a href="./security.html">보안</a>
+      <a href="./getting-started.html">실행 방법</a>
+      <div class="spacer"></div>
+    </div>
+  </nav>
+
+  <main class="container">
+    <h1>블로그 프로젝트 소개</h1>
+    <p>Spring Boot 기반의 블로그 시스템으로 게시글, 댓글, 좋아요, 동영상(Stories) 등 핵심 기능을 제공하는 웹 애플리케이션입니다.</p>
+
+    <div class="panel">
+      <h2>제작 목적</h2>
+      <ul>
+        <li>Spring 생태계 전반(웹, JPA, MyBatis, 보안)의 실전 통합 학습</li>
+        <li>컨텐츠 CRUD, 파일 업로드, 권한 제어 등 웹 서비스 필수 기능 구현</li>
+        <li>동영상 콘텐츠(Stories)로 미디어 처리 흐름과 UI/UX 실습</li>
+        <li>포트폴리오 목적의 운영형 프로젝트 아키텍처 설계</li>
+      </ul>
+    </div>
+
+    <div class="grid cols-2">
+      <div class="panel">
+        <h2>프로젝트 개요</h2>
+        <ul>
+          <li>플랫폼: Spring Boot 3.5.7, Java 17, Maven</li>
+          <li>서버: 내장 Tomcat 10.1.48, 포트 8080</li>
+          <li>데이터베이스: MySQL 8.0 (운영), H2 (테스트)</li>
+          <li>뷰: Thymeleaf, 정적 리소스 분리(JS/CSS/이미지/동영상)</li>
+          <li>보안: Spring Security(Form Login, Remember-Me)</li>
+        </ul>
+      </div>
+
+      <div class="panel">
+        <h2>주요 기능</h2>
+        <ul>
+          <li>게시글/스토리 작성·수정·삭제(ADMIN), 공개 조회</li>
+          <li>댓글, 대댓글(Posts), 좋아요(AJAX), 조회수</li>
+          <li>카테고리, 태그, 검색(FULLTEXT)</li>
+          <li>동영상 업로드(≤100MB), 썸네일 자동 생성</li>
+          <li>공지사항, 방문자 통계, 사이트 설정</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="panel">
+      <h2>빠른 이동</h2>
+      <ul>
+        <li><a href="./tech-stack.html">기술 스택</a></li>
+        <li><a href="./database.html">데이터베이스</a></li>
+        <li><a href="./security.html">보안</a></li>
+        <li><a href="./getting-started.html">실행 방법</a></li>
+      </ul>
+    </div>
+
+    <div class="panel">
+      <h2>핵심 태그</h2>
+      <div>
+        <span class="tag">Java 17</span>
+        <span class="tag">Spring Boot 3.5.7</span>
+        <span class="tag">Tomcat 10.1</span>
+        <span class="tag">MySQL 8</span>
+        <span class="tag">JPA / Hibernate</span>
+        <span class="tag">MyBatis</span>
+        <span class="tag">Spring Security</span>
+        <span class="tag">Thymeleaf</span>
+        <span class="tag">HikariCP</span>
+        <span class="tag">Kakao Maps JS</span>
+      </div>
+    </div>
+
+    <p class="muted">학습 및 포트폴리오 용도로 제작되었습니다.</p>
+
+    <div class="footer">© 2025 Blog Project</div>
+  </main>
+</body>
+</html>
+

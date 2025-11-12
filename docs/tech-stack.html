@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>기술 스택</title>
+  <link rel="stylesheet" href="./css/style.css" />
+</head>
+<body>
+  <nav class="nav">
+    <div class="wrap">
+      <div class="brand">Blog Project Docs</div>
+      <a href="./index.html">소개</a>
+      <a href="./tech-stack.html">기술 스택</a>
+      <a href="./database.html">데이터베이스</a>
+      <a href="./security.html">보안</a>
+      <a href="./getting-started.html">실행 방법</a>
+      <div class="spacer"></div>
+    </div>
+  </nav>
+
+  <main class="container">
+    <h1>기술 스택</h1>
+
+    <div class="panel">
+      <h2>Back-End</h2>
+      <ul>
+        <li>Spring Boot 3.5.7, Spring Framework 6.x</li>
+        <li>Spring Web (MVC): REST 컨트롤러 및 서버 사이드 렌더링</li>
+        <li>Spring Validation(JSR-380): DTO/폼 검증</li>
+        <li>Spring Security: 인증/인가, Form Login, Remember-Me</li>
+      </ul>
+    </div>
+
+    <div class="panel">
+      <h2>Persistence</h2>
+      <ul>
+        <li>Spring Data JPA + Hibernate (MySQLDialect, DDL auto <span class="kbd">update</span>)</li>
+        <li>MyBatis Spring Boot Starter 3.0.5 (mapper XML, camelCase ↔ snake_case)</li>
+        <li>HikariCP: maxPool=10, minIdle=5, idleTimeout=300s, connTimeout=20s, maxLifetime=1200s</li>
+        <li>DB Driver: MySQL Connector/J (runtime), H2 (test)</li>
+      </ul>
+    </div>
+
+    <div class="panel">
+      <h2>Front-End</h2>
+      <ul>
+        <li>Thymeleaf + thymeleaf-extras-springsecurity6</li>
+        <li>정적 리소스: <code class="inline">/css/**</code>, <code class="inline">/js/**</code>, <code class="inline">/images/**</code>, <code class="inline">/uploads/**</code></li>
+        <li>JS 모듈: posts(detail/edit/write), stories(list/detail/edit/write)</li>
+        <li>Kakao Maps JavaScript API (키: <code class="inline">kakao.maps.javascript.key</code>)</li>
+      </ul>
+    </div>
+
+    <div class="panel">
+      <h2>Dev & Build</h2>
+      <ul>
+        <li>Java 17, Maven 3.x (Wrapper 포함)</li>
+        <li>Spring Boot DevTools: 핫 리로드</li>
+        <li>Lombok: 보일러플레이트 제거(Annotation Processor)</li>
+        <li>IDE: VS Code / IntelliJ IDEA</li>
+      </ul>
+    </div>
+
+    <div class="panel">
+      <h2>파일 업로드</h2>
+      <ul>
+        <li>멀티파트: 파일/요청 크기 최대 100MB</li>
+        <li>경로: 이미지 <code class="inline">/uploads/images/</code>, 동영상 <code class="inline">/uploads/videos/</code></li>
+        <li>스토리: 동영상 전용, 썸네일 자동 생성(첫 프레임)</li>
+      </ul>
+      <pre><code># application.properties (발췌)
+spring.servlet.multipart.max-file-size=100MB
+spring.servlet.multipart.max-request-size=100MB
+      </code></pre>
+    </div>
+
+    <div class="footer">Updated · 기술 스택 개요</div>
+  </main>
+</body>
+</html>
+
