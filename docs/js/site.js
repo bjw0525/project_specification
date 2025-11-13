@@ -135,4 +135,39 @@
   window.addEventListener('scroll', parallax, {passive:true});
   window.addEventListener('resize', parallax);
   parallax();
+
+  // Stack showcase scroll interaction
+  document.querySelectorAll('[data-stack-scroll]').forEach(stackScroll => {
+    const root = stackScroll.closest('.stack-showcase') || document;
+    const cards = Array.from(stackScroll.querySelectorAll('[data-stack-card]'));
+    const pills = Array.from(root.querySelectorAll('[data-stack-pill]'));
+    const currentEl = root.querySelector('[data-stack-current]');
+    const totalEl = root.querySelector('[data-stack-total]');
+    const labelEl = root.querySelector('[data-stack-current-label]');
+    const format = (n) => n.toString().padStart(2,'0');
+    if (totalEl) totalEl.textContent = format(cards.length);
+    const activate = (card) => {
+      cards.forEach(c => c.classList.toggle('is-active', c === card));
+      pills.forEach(p => p.classList.toggle('is-active', p.dataset.stackLabel === card.dataset.stackLabel));
+      if (currentEl) currentEl.textContent = format(cards.indexOf(card)+1);
+      if (labelEl) labelEl.textContent = card.dataset.stackLabel || '';
+    };
+    if (cards[0]) activate(cards[0]);
+    if ('IntersectionObserver' in window) {
+      const observer = new IntersectionObserver((entries)=>{
+        entries.forEach(entry => {
+          if (entry.isIntersecting) activate(entry.target);
+        });
+      }, {threshold:0.55});
+      cards.forEach(card => observer.observe(card));
+    } else if (cards[0]) {
+      activate(cards[0]);
+    }
+    pills.forEach(pill => {
+      pill.addEventListener('click', ()=>{
+        const target = cards.find(c => c.dataset.stackLabel === pill.dataset.stackLabel);
+        if (target) target.scrollIntoView({behavior:'smooth', block:'center', inline:'nearest'});
+      });
+    });
+  });
 })();

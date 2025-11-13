@@ -10,7 +10,7 @@
   <nav class="nav">
     <div class="wrap">
       <img src="https://postfiles.pstatic.net/MjAyNTA4MTBfMTIz/MDAxNzU0ODM0NDg0MjIz.mBN-_sqJM46lzkFRf_pKevA72w6JtvGv1eU2UVetZ98g.Dp4A91FHntZ-JigJoSAfZylPoaRtNi8rEiwWKLaUd48g.JPEG/%EC%97%AC%ED%96%8912.jpg?type=w966" alt="여행 사진" style="height:36px;width:auto;border-radius:6px;object-fit:cover" />
-      <div class="brand">Blog Project Docs</div>
+      <a class="brand" href="./index.html">Blog Project Docs</a>
       <div class="spacer"></div>
       <div class="links">
         <a href="./index.html">소개</a>
@@ -28,74 +28,116 @@
   </nav>
 
   <main class="container">
-    <section class="hero reveal">
-      <h1 class="title">실행 방법</h1>
-      <p class="subtitle">DB 초기화부터 애플리케이션 실행까지 빠르게 따라 해보세요.</p>
-      <div class="actions">
-        <a class="btn btn-primary" href="./database.html">DB 준비</a>
-        <a class="btn btn-ghost" href="./security.html">보안 구성</a>
+    <section class="hero hero--cover reveal" data-hero="getting-started">
+      <div class="hero__content">
+        <p class="hero__eyebrow">Launch Checklist</p>
+        <h1 class="title">DB 준비부터 부트 실행까지 4단계</h1>
+        
+        <div class="actions">
+          <a class="btn btn-primary" href="./database.html">DB 준비</a>
+          <a class="btn btn-outline-light" href="./security.html">보안 구성</a>
+        </div>
       </div>
     </section>
 
-    <div class="panel reveal">
-      <h2 class="section-title">사전 준비</h2>
-      <ul>
-        <li>Java 17, Maven 3.x</li>
-        <li>MySQL 8.0 (포트 3306)</li>
-      </ul>
-    </div>
+    <section class="stack-showcase reveal" aria-label="실행 가이드 단계">
+      <div class="stack-showcase__grid">
+        <aside class="stack-legend">
+          
+          <ul class="stack-legend__list">
+            <li class="stack-legend__item is-active" data-stack-pill data-stack-label="사전 준비">사전 준비</li>
+            <li class="stack-legend__item" data-stack-pill data-stack-label="DB 생성">DB 생성</li>
+            <li class="stack-legend__item" data-stack-pill data-stack-label="테이블 &amp; 데이터">테이블 &amp; 데이터</li>
+            <li class="stack-legend__item" data-stack-pill data-stack-label="프로퍼티 확인">프로퍼티 확인</li>
+            <li class="stack-legend__item" data-stack-pill data-stack-label="애플리케이션 실행">애플리케이션 실행</li>
+            <li class="stack-legend__item" data-stack-pill data-stack-label="참고">참고</li>
+          </ul>
+          <div class="stack-counter">
+            <div>
+              <span class="stack-counter__current" data-stack-current>01</span>
+              <span class="stack-counter__slash">/</span>
+              <span data-stack-total>06</span>
+            </div>
+            <div class="stack-counter__label" data-stack-current-label>사전 준비</div>
+          </div>
+        </aside>
 
-    <div class="panel reveal">
-      <h2 class="section-title">1) 데이터베이스 생성</h2>
-      <pre><code>CREATE DATABASE IF NOT EXISTS blog
+        <div class="stack-scroll" data-stack-scroll>
+          <article class="stack-card is-active" data-stack-card data-stack-label="사전 준비">
+            <div class="stack-card__eyebrow">Checklist</div>
+            <h2 class="stack-card__title">사전 준비</h2>
+            <p class="stack-card__summary">필수 런타임과 포트를 먼저 확보하세요.</p>
+            <ul>
+              <li>Java 17, Maven 3.x (Wrapper 포함)</li>
+              <li>MySQL 8.0 (기본 포트 3306, 스키마 <code class="inline">blog</code>)</li>
+            </ul>
+          </article>
+
+          <article class="stack-card" data-stack-card data-stack-label="DB 생성">
+            <div class="stack-card__eyebrow">Step 1</div>
+            <h2 class="stack-card__title">데이터베이스 생성</h2>
+            <p class="stack-card__summary">UTF8MB4 문자셋으로 스키마를 초기화합니다.</p>
+            <pre><code>CREATE DATABASE IF NOT EXISTS blog
   DEFAULT CHARACTER SET utf8mb4
   COLLATE utf8mb4_unicode_ci;
-      </code></pre>
-    </div>
+            </code></pre>
+          </article>
 
-    <div class="panel reveal">
-      <h2 class="section-title">2) 테이블 및 테스트 데이터</h2>
-      <pre><code># 테이블 생성
+          <article class="stack-card" data-stack-card data-stack-label="테이블 &amp; 데이터">
+            <div class="stack-card__eyebrow">Step 2</div>
+            <h2 class="stack-card__title">테이블 및 테스트 데이터</h2>
+            <p class="stack-card__summary">DDL과 샘플 데이터를 순차 실행합니다.</p>
+            <pre><code># 테이블 생성
 mysql -u root -p blog &lt; create_tables.sql
 
 # (선택) 테스트 데이터 삽입
 mysql -u root -p blog &lt; test_data.sql
-      </code></pre>
-    </div>
+            </code></pre>
+          </article>
 
-    <div class="panel reveal">
-      <h2 class="section-title">3) application.properties (확인)</h2>
-      <pre><code>spring.datasource.url=jdbc:mysql://localhost:3306/blog?serverTimezone=UTC&amp;characterEncoding=UTF-8
+          <article class="stack-card" data-stack-card data-stack-label="프로퍼티 확인">
+            <div class="stack-card__eyebrow">Step 3</div>
+            <h2 class="stack-card__title">application.properties 확인</h2>
+            <p class="stack-card__summary">JDBC 연결 정보와 자격 증명을 맞춰 둡니다.</p>
+            <pre><code>spring.datasource.url=jdbc:mysql://localhost:3306/blog?serverTimezone=UTC&amp;characterEncoding=UTF-8
 spring.datasource.username=root
 spring.datasource.password=1111
-      </code></pre>
-    </div>
+            </code></pre>
+          </article>
 
-    <div class="panel reveal">
-      <h2 class="section-title">4) 애플리케이션 실행</h2>
-      <pre><code># Windows
+          <article class="stack-card" data-stack-card data-stack-label="애플리케이션 실행">
+            <div class="stack-card__eyebrow">Step 4</div>
+            <h2 class="stack-card__title">애플리케이션 실행</h2>
+            <p class="stack-card__summary">OS 별 Maven Wrapper 명령으로 바로 부팅합니다.</p>
+            <pre><code># Windows
 mvnw.cmd spring-boot:run
 
 # Linux/Mac
 ./mvnw spring-boot:run
-      </code></pre>
-      <ul>
-        <li>접속: <code class="inline">http://localhost:8080</code></li>
-        <li>관리자 계정: <code class="inline">admin / 1111</code> (DataInitializer)</li>
-      </ul>
-    </div>
+            </code></pre>
+            <ul>
+              <li>접속: <code class="inline">http://localhost:8080</code></li>
+              <li>관리자: <code class="inline">admin / 1111</code> (DataInitializer)</li>
+            </ul>
+          </article>
 
-    <div class="panel reveal">
-      <h2 class="section-title">참고</h2>
-      <ul>
-        <li>운영 시 비밀번호 인코더를 BCrypt로 전환 권장</li>
-        <li>파일 업로드 경로: <code class="inline">/uploads/images/</code>, <code class="inline">/uploads/videos/</code></li>
-        <li>H2 데이터베이스는 테스트 용도로만 사용</li>
-      </ul>
-    </div>
+          <article class="stack-card" data-stack-card data-stack-label="참고">
+            <div class="stack-card__eyebrow">Tips</div>
+            <h2 class="stack-card__title">참고</h2>
+            <p class="stack-card__summary">운영 전환 시 필수로 점검할 항목입니다.</p>
+            <ul>
+              <li>비밀번호 인코더를 BCrypt로 전환</li>
+              <li>파일 업로드 경로: <code class="inline">/uploads/images/</code>, <code class="inline">/uploads/videos/</code></li>
+              <li>H2는 테스트 용도 전용</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
 
     <div class="footer">Updated · 실행 가이드</div>
   </main>
   <script src="./js/site.js"></script>
 </body>
 </html>
+

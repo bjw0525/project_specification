@@ -10,7 +10,7 @@
   <nav class="nav">
     <div class="wrap">
       <img src="https://postfiles.pstatic.net/MjAyNTA4MTBfMTIz/MDAxNzU0ODM0NDg0MjIz.mBN-_sqJM46lzkFRf_pKevA72w6JtvGv1eU2UVetZ98g.Dp4A91FHntZ-JigJoSAfZylPoaRtNi8rEiwWKLaUd48g.JPEG/%EC%97%AC%ED%96%8912.jpg?type=w966" alt="여행 사진" style="height:36px;width:auto;border-radius:6px;object-fit:cover" />
-      <div class="brand">Blog Project Docs</div>
+      <a class="brand" href="./index.html">Blog Project Docs</a>
       <div class="spacer"></div>
       <div class="links">
         <a href="./index.html">소개</a>
@@ -28,68 +28,110 @@
   </nav>
 
   <main class="container">
-    <section class="hero reveal">
-      <h1 class="title">보안 구성 요약</h1>
-      <p class="subtitle">Spring Security 기반 인증/인가, Remember-Me, URL 별 접근 제어와 운영 전환 시 권장 설정(BCrypt, CSRF 등)을 한 눈에 정리했습니다.</p>
-      <div class="actions">
-        <a class="btn btn-primary" href="#auth">인증/인가 보기</a>
-        <a class="btn btn-ghost" href="#hardening">권장 보안 설정</a>
+    <section class="hero hero--cover reveal" data-hero="security">
+      <div class="hero__content">
+        <p class="hero__eyebrow">Security Posture</p>
+        <h1 class="title">인증·인가부터 하드닝까지 단일 플로우</h1>
+        <p class="subtitle">
+          
+        </p>
+        <div class="actions">
+          <a class="btn btn-primary" href="#auth">인증/인가 보기</a>
+          <a class="btn btn-outline-light" href="#hardening">권장 보안 설정</a>
+        </div>
       </div>
     </section>
 
-    <h1 class="section-title reveal">보안 구성</h1>
-    <p class="reveal">Spring Security 기반으로 Form Login과 Remember-Me를 사용하며, URL 패턴별 접근 권한을 세분화합니다.</p>
+    <section class="stack-showcase reveal" aria-label="보안 구성 상세">
+      <div class="stack-showcase__grid">
+        <aside class="stack-legend">
+          <p class="stack-legend__intro">
+            
+          </p>
+          <ul class="stack-legend__list">
+            <li class="stack-legend__item is-active" data-stack-pill data-stack-label="인증">인증</li>
+            <li class="stack-legend__item" data-stack-pill data-stack-label="인가">인가</li>
+            <li class="stack-legend__item" data-stack-pill data-stack-label="비밀번호 인코딩">비밀번호 인코딩</li>
+            <li class="stack-legend__item" data-stack-pill data-stack-label="Remember-Me">Remember-Me</li>
+            <li class="stack-legend__item" data-stack-pill data-stack-label="추가 권장 사항">추가 권장 사항</li>
+          </ul>
+          <div class="stack-counter">
+            <div>
+              <span class="stack-counter__current" data-stack-current>01</span>
+              <span class="stack-counter__slash">/</span>
+              <span data-stack-total>05</span>
+            </div>
+            <div class="stack-counter__label" data-stack-current-label>인증</div>
+          </div>
+        </aside>
 
-    <div id="auth" class="panel reveal">
-      <h2 class="section-title">인증</h2>
-      <ul>
-        <li>로그인 페이지: <code class="inline">/member/signin</code> (POST 처리 포함)</li>
-        <li>로그아웃: <code class="inline">/member/signout</code></li>
-        <li>성공 시 <code class="inline">/</code>, 실패 시 <code class="inline">/member/signin?error</code></li>
-      </ul>
-    </div>
+        <div class="stack-scroll" data-stack-scroll>
+          <article class="stack-card is-active" id="auth" data-stack-card data-stack-label="인증">
+            <div class="stack-card__eyebrow">Authentication</div>
+            <h2 class="stack-card__title">인증</h2>
+            <p class="stack-card__summary">
+              Form Login 기반 인증 플로우와 리디렉션 동작을 정의해 사용자 경험을 단순화했습니다.
+            </p>
+            <ul>
+              <li>로그인 페이지: <code class="inline">/member/signin</code> (GET/POST)</li>
+              <li>로그아웃: <code class="inline">/member/signout</code></li>
+              <li>성공 시 <code class="inline">/</code>, 실패 시 <code class="inline">/member/signin?error</code></li>
+            </ul>
+          </article>
 
-    <div class="panel reveal">
-      <h2 class="section-title">인가</h2>
-      <ul>
-        <li>공개: 홈, 정적 리소스, GET 공지/게시글/스토리 목록·상세</li>
-        <li>인증 필요: 댓글 작성, 좋아요, 회원 정보 수정/삭제</li>
-        <li>ADMIN 전용: 게시글/스토리/공지 작성·수정·삭제, 관리자 페이지</li>
-      </ul>
-    </div>
+          <article class="stack-card" data-stack-card data-stack-label="인가">
+            <div class="stack-card__eyebrow">Authorization</div>
+            <h2 class="stack-card__title">인가</h2>
+            <p class="stack-card__summary">URL 패턴 기반으로 공개/인증/관리자 전용 영역을 분리했습니다.</p>
+            <ul>
+              <li>공개: 홈, 정적 리소스, GET 공지/게시글/스토리</li>
+              <li>인증 필요: 댓글 작성, 좋아요, 회원 정보 수정/삭제</li>
+              <li>ADMIN 전용: 게시글/스토리/공지 작성·수정·삭제, 관리자 페이지</li>
+            </ul>
+          </article>
 
-    <div class="panel reveal">
-      <h2 class="section-title">비밀번호 인코딩</h2>
-      <ul>
-        <li>개발용: <strong>NoOpPasswordEncoder</strong> (평문 저장) — 운영 금지</li>
-        <li>운영 권장: <strong>BCryptPasswordEncoder</strong></li>
-      </ul>
-      <pre><code>// 운영 전환 시 예시 (Java)
+          <article class="stack-card" data-stack-card data-stack-label="비밀번호 인코딩">
+            <div class="stack-card__eyebrow">Password Policy</div>
+            <h2 class="stack-card__title">비밀번호 인코딩</h2>
+            <p class="stack-card__summary">
+              개발/운영 환경별 인코더 전략과 샘플 Bean 설정을 안내합니다.
+            </p>
+            <ul>
+              <li>개발용: <strong>NoOpPasswordEncoder</strong> (평문) — 운영 금지</li>
+              <li>운영 권장: <strong>BCryptPasswordEncoder</strong></li>
+            </ul>
+            <pre><code>// 운영 전환 시 예시
 @Bean
 PasswordEncoder passwordEncoder() {
     return new BCryptPasswordEncoder();
 }
-      </code></pre>
-    </div>
+            </code></pre>
+          </article>
 
-    <div class="panel reveal">
-      <h2 class="section-title">Remember-Me</h2>
-      <ul>
-        <li>유지 기간: 14일</li>
-        <li>Key: <code class="inline">blog-remember-me-key</code></li>
-      </ul>
-    </div>
+          <article class="stack-card" data-stack-card data-stack-label="Remember-Me">
+            <div class="stack-card__eyebrow">Session Extension</div>
+            <h2 class="stack-card__title">Remember-Me</h2>
+            <p class="stack-card__summary">장기 세션이 필요한 사용자를 위한 설정입니다.</p>
+            <ul>
+              <li>유지 기간: 14일</li>
+              <li>Key: <code class="inline">blog-remember-me-key</code></li>
+              <li>쿠키 이름: <code class="inline">remember-me</code> (Spring 기본)</li>
+            </ul>
+          </article>
 
-    <section id="hardening" class="section-block reveal">
-      <div class="panel" style="margin:0">
-      <h2 class="section-title">추가 권장 사항</h2>
-      <ul>
-        <li>CSRF 토큰 활성화</li>
-        <li>XSS 방어(입력 검증, 출력 인코딩), 컨텐츠 보안 정책(CSP) 고려</li>
-        <li>SQL Injection 방어(파라미터 바인딩, Mapper 검토)</li>
-        <li>파일 업로드 검증(확장자, MIME, 크기, 저장 경로)</li>
-        <li>API Rate Limiting, 로깅/감사 전략 수립</li>
-      </ul>
+          <article class="stack-card" id="hardening" data-stack-card data-stack-label="추가 권장 사항">
+            <div class="stack-card__eyebrow">Hardening</div>
+            <h2 class="stack-card__title">추가 권장 사항</h2>
+            <p class="stack-card__summary">운영 안정성을 높이기 위한 보안 체크리스트입니다.</p>
+            <ul>
+              <li>CSRF 토큰 활성화 및 SameSite 쿠키 적용</li>
+              <li>XSS 방어: 입력 검증 + 출력 인코딩 + CSP</li>
+              <li>SQL Injection 방지: 파라미터 바인딩, Mapper 검토</li>
+              <li>파일 업로드 검증: 확장자·MIME·크기·경로 화이트리스트</li>
+              <li>API Rate Limiting, 감사 로깅, 보안 이벤트 모니터링</li>
+            </ul>
+          </article>
+        </div>
       </div>
     </section>
 
@@ -98,3 +140,4 @@ PasswordEncoder passwordEncoder() {
   <script src="./js/site.js"></script>
 </body>
 </html>
+
