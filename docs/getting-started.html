@@ -1,15 +1,18 @@
 <!doctype html>
 <html lang="ko">
+
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>실행 방법</title>
   <link rel="stylesheet" href="./css/style.css" />
 </head>
+
 <body>
   <nav class="nav">
     <div class="wrap">
-      <img src="https://postfiles.pstatic.net/MjAyNTA4MTBfMTIz/MDAxNzU0ODM0NDg0MjIz.mBN-_sqJM46lzkFRf_pKevA72w6JtvGv1eU2UVetZ98g.Dp4A91FHntZ-JigJoSAfZylPoaRtNi8rEiwWKLaUd48g.JPEG/%EC%97%AC%ED%96%8912.jpg?type=w966" alt="여행 사진" style="height:36px;width:auto;border-radius:6px;object-fit:cover" />
+      <img src="./images/hero-logo.png" alt="블루 글로우 심볼"
+        style="height:36px;width:auto;border-radius:6px;object-fit:cover" />
       <a class="brand" href="./index.html">Blog Project Docs</a>
       <div class="spacer"></div>
       <div class="links">
@@ -30,9 +33,10 @@
   <main class="container">
     <section class="hero hero--cover reveal" data-hero="getting-started">
       <div class="hero__content">
-        <p class="hero__eyebrow">Launch Checklist</p>
         <h1 class="title">DB 준비부터 부트 실행까지 4단계</h1>
-        
+        <p class="subtitle">
+
+        </p>
         <div class="actions">
           <a class="btn btn-primary" href="./database.html">DB 준비</a>
           <a class="btn btn-outline-light" href="./security.html">보안 구성</a>
@@ -43,7 +47,9 @@
     <section class="stack-showcase reveal" aria-label="실행 가이드 단계">
       <div class="stack-showcase__grid">
         <aside class="stack-legend">
-          
+          <p class="stack-legend__intro">
+
+          </p>
           <ul class="stack-legend__list">
             <li class="stack-legend__item is-active" data-stack-pill data-stack-label="사전 준비">사전 준비</li>
             <li class="stack-legend__item" data-stack-pill data-stack-label="DB 생성">DB 생성</li>
@@ -127,7 +133,8 @@ mvnw.cmd spring-boot:run
             <p class="stack-card__summary">운영 전환 시 필수로 점검할 항목입니다.</p>
             <ul>
               <li>비밀번호 인코더를 BCrypt로 전환</li>
-              <li>파일 업로드 경로: <code class="inline">/uploads/images/</code>, <code class="inline">/uploads/videos/</code></li>
+              <li>파일 업로드 경로: <code class="inline">/uploads/images/</code>, <code class="inline">/uploads/videos/</code>
+              </li>
               <li>H2는 테스트 용도 전용</li>
             </ul>
           </article>
@@ -139,5 +146,5 @@ mvnw.cmd spring-boot:run
   </main>
   <script src="./js/site.js"></script>
 </body>
-</html>
 
+</html>

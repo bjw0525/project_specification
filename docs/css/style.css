@@ -58,14 +58,14 @@ a:hover{text-decoration:underline}
 .hero--cover{position:relative;border:none;border-radius:28px;padding:140px 32px;margin:24px 0 42px;min-height:62vh;display:flex;align-items:center;justify-content:center;text-align:center;background-size:cover;background-position:center;background-image:url('../images/hero-presenter.png');overflow:hidden;color:#111}
 .hero--cover::before{content:\"\";position:absolute;inset:0;background:linear-gradient(180deg,rgba(255,255,255,.95),rgba(255,255,255,.75));z-index:0}
 .hero--cover .hero__content{position:relative;z-index:1;max-width:760px}
-.hero--cover .title{color:#111;font-size:clamp(1.8rem,3.6vw,2.6rem);letter-spacing:.005em}
-.hero--cover .subtitle{color:rgba(0,0,0,.7);font-size:1.1rem}
-.hero--cover .actions{justify-content:center}
+.hero--cover .title{color:#111;font-size:clamp(1.8rem,3.6vw,2.6rem);letter-spacing:.005em;text-shadow:-2px -2px 4px rgba(255,255,255,.85),2px -2px 4px rgba(255,255,255,.85),-2px 2px 4px rgba(255,255,255,.85),2px 2px 4px rgba(255,255,255,.85)}
+.hero--cover .subtitle{color:rgba(0,0,0,.7);font-size:1.1rem;text-shadow:-1px -1px 3px rgba(255,255,255,.85),1px -1px 3px rgba(255,255,255,.85),-1px 1px 3px rgba(255,255,255,.85),1px 1px 3px rgba(255,255,255,.85)}
+.hero--cover .actions{display:none}
 .hero__eyebrow{text-transform:uppercase;letter-spacing:.45em;font-weight:700;color:rgba(0,0,0,.6);margin-bottom:18px;font-size:.95rem}
 .hero--cover[data-hero=\"waves\"],
 .hero--cover[data-hero=\"database\"],
 .hero--cover[data-hero=\"security\"],
-.hero--cover[data-hero=\"getting-started\"]{background-image:url('../images/hero-presenter.png')}
+.hero--cover[data-hero=\"getting-started\"]{background-image:url('../images/tech-stack/lab-tech-stack.png')}
 
 /* Buttons */
 .btn{display:inline-block;border-radius:8px;padding:.58rem .9rem;font-weight:700;text-decoration:none;transition:background .15s ease, box-shadow .15s ease}
